@@ -1,0 +1,157 @@
+---
+title: General
+description: Business units, lead sources, lead statuses (including going cold), opportunity statuses, tags, custom fields, lifecycle transitions, and pricing & quote defaults.
+---
+
+<UIPath items={["Configuration", "General"]} />
+
+The **General** page holds the lists used on customer, prospect, lead, and
+opportunity forms. Each list is on its own tab.
+
+<Screenshot src="/images/configuration/general-business-units.jpg" alt="General configuration" caption="① Tabs ② Active toggle ③ Edit ④ Add (More Business Unit) ⑤ Status Filter" />
+
+## Working with a list
+
+Business Units, Lead Sources, and Tags all work the same way:
+
+<Steps>
+  <Step>
+    ### Add an entry
+    Click the add link at the bottom of the list (**More Business Unit**,
+    **More Lead Source**, or **Add Customer Tag**) and enter the name.
+  </Step>
+  <Step>
+    ### Edit an entry
+    Click the **pencil** icon in the **Actions** column.
+  </Step>
+  <Step>
+    ### Activate or deactivate
+    Use the **Status** toggle (**Active** / **Inactive**). Use **Status Filter**
+    to show All, Active, or Inactive entries.
+  </Step>
+</Steps>
+
+## Business Units
+
+Business units you can assign to customers and prospects (**Business unit**
+field). They're also a filter on the Customers list.
+
+## Lead Sources
+
+Where a lead or customer came from, for example *Cold call*, *Customer called
+in*, *Referral*, or *Website lead*. They appear in the **Lead source** field on
+customers, prospects, leads, and opportunities.
+
+## Lead Statuses
+
+Statuses for leads. Click **New Status** to add one. Each status has a **Name**,
+**Description**, **Color**, **Order**, and **Default** setting. The default
+status is pre-selected on the **New lead** form. Use **⋮** to **Edit** or
+**Delete** a status.
+
+<Screenshot src="/images/configuration/general-lead-statuses.jpg" alt="Lead Statuses" caption="① New Status ② Goes cold after · Cooling period" />
+
+### Going cold
+
+Each status can mark leads as going cold when nobody works on them. Different
+businesses move at different speeds, so you set the limit per status.
+
+<Steps>
+  <Step>
+    ### Edit the status
+    Click **⋮ → Edit** on the status (or create a **New Status**).
+  </Step>
+  <Step>
+    ### Turn on Mark leads as going cold
+    The app explains it: *Leads with no activity show as Going cold for the Warn
+    before period, then as Cold once the Cold after period ends.*
+
+    <Screenshot src="/images/configuration/lead-status-going-cold.jpg" alt="Edit Lead Status, going cold" caption="① Mark leads as going cold ② Cold after ③ Warn before" />
+  </Step>
+  <Step>
+    ### Set the periods
+    - **Cold after**: how long a lead can sit in this status with no activity
+      before it's **Cold**.
+    - **Warn before**: how long before that the lead shows as **Going cold**.
+
+    Choose **Hours**, **Days**, or **Weeks** for each. Click **Save Changes**.
+  </Step>
+</Steps>
+
+On the list, these show as **Goes cold after** and **Cooling period**. Going
+cold and cold leads appear on the
+[Leads Overview](/docs/lead-management/leads-overview#needs-attention) and on
+the **Going cold** and **Cold** tabs of the [Leads list](/docs/lead-management/leads).
+
+## Opportunity Statuses
+
+The stages an opportunity moves through, each with a **Probability**:
+
+| Status | Probability (QA example) |
+| --- | --- |
+| Open | 10% |
+| In Discussion | 40% |
+| Issued Estimates | 60% |
+| Purchasing | 80% |
+| Closed Won | 100% |
+| Closed Lost | 0% |
+
+Click the **edit** icon on a row to change it.
+
+<Screenshot src="/images/configuration/general-opportunity-statuses.jpg" alt="Opportunity Statuses" caption="① Statuses and probability ② Edit" />
+
+## Tags
+
+Customer **Tags** are labels you set up yourself (for example *COD Customer*,
+*DS Customer*, *Vendor*). Add them with **Add Customer Tag**. They appear in
+the **Tags** field on the customer form, on the customer page, and in the
+**Customer Tags** filter.
+
+<Callout type="info">
+  Tags are separate from a customer's lifecycle **Status**. See
+  [Key Concepts](/docs/getting-started/key-concepts#the-customer-lifecycle).
+</Callout>
+
+## Custom Fields
+
+Click **New Field** to add your own fields. The list shows **Order**, **Name**,
+**Type**, **Options**, **Unique**, and **Required**, and has a **Search
+fields…** box.
+
+## Lifecycle Transitions
+
+Controls how records move between lifecycle stages.
+
+<Screenshot src="/images/configuration/lifecycle-transitions.jpg" alt="Lifecycle Transitions" caption="① Lead statuses allowed for promotion ② Transition permissions ③ Add Role" />
+
+- **Lead Statuses Allowed for Lead to Prospect Promotion**: only leads in the
+  selected statuses can be promoted from Lead to Prospect. Leave it empty to
+  allow promotion from any lead status. Click **Add a status**.
+- **Transition permissions**: choose which roles can promote records for each
+  transition, and which automated action may do so on its own. Click **Add
+  Role** on a row to allow another role.
+
+| Transition |
+| --- |
+| Lead → Prospect |
+| Prospect → Customer |
+| Customer → Inactive |
+| Inactive → Archived |
+| Inactive/Archived → Customer (activate) |
+
+<Callout type="warn">
+  A transition marked **No roles assigned yet** can't be done by anyone until a
+  role is added. On-screen note: *"An automated promotion records its own
+  reason and is rejected unless it is selected here."*
+</Callout>
+
+## Pricing & Quotes
+
+Organization-wide defaults for quotes and price tiers.
+
+<Screenshot src="/images/configuration/pricing-quotes.jpg" alt="Pricing & Quotes" caption="① Require customer consent (organization default) ② Toggle" />
+
+**Require customer consent**: when it's on, customer consent is required for
+all quotes. This default is applied to every new customer when it's created.
+Existing customers keep their own setting. See
+[Pricing & Quotes for a customer](/docs/customer-management/pricing-and-quotes).

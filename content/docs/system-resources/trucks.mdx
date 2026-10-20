@@ -1,0 +1,163 @@
+---
+title: Fleet (Trucks)
+description: See each truck's routes, load, and availability; add trucks; and schedule truck unavailability.
+---
+
+**Fleet** (previously **Trucks**) manages every transport vehicle and shows what
+is happening with each one: its route today, how full it is, and when it's
+unavailable. [Dispatch](/docs/operations/routes) is where you plan routes;
+Fleet is where you look after individual trucks. Each
+[facility](/docs/system-resources/facilities) can have several trucks.
+
+<UIPath items={["Operations", "Fleet"]} />
+
+The page has two views: **Availability** (a weekly calendar) and **Table** (a
+list). Both share the controls and summary cards at the top.
+
+<Screenshot src="/images/system-resources/fleet-availability.jpg" alt="Fleet, Availability view" caption="① Facility ② Availability / Table ③ Week ④ Add unavailability ⑤ New truck ⑥ Summary cards ⑦ Routes on each day" />
+
+## Facility and summary cards
+
+Choose the **Facility** at the top. The choice is *remembered for all
+Operations pages*. The cards summarize that facility for today:
+
+| Card | Shows |
+| --- | --- |
+| **On the road today** | Trucks with a route today, for example *1 of 1*, with the number of routes and stops. |
+| **Load today** | How full today's trucks are, for example *11.2 of 100 pallets on trucks with routes*. |
+| **Idle today** | Available trucks without a route today (*Every available truck has a route* when 0). |
+| **Unavailable** | Trucks scheduled as unavailable this week. |
+| **Route conflicts · 7 days** | Routes planned on a truck that is unavailable (*No routes on unavailable trucks* when 0). |
+
+## Availability view
+
+The **Availability** view shows one row per truck (name, plate, pallets, and
+height) and one column per day of the week. Use **‹ ›** to change week.
+
+- **Routes** for each day show as chips. In the demo, clicking a route took
+  the user to [Dispatch](/docs/operations/routes) to plan it.
+- **Unavailability** shows as a red bar across the days, with its reason or
+  note.
+- Hovering over an empty day shows an **Add unavailability** shortcut for that
+  truck and day.
+
+<Screenshot src="/images/system-resources/fleet-unavailability-bar.jpg" alt="Unavailability in the week" caption="① Unavailable card ② Unavailability bar" />
+
+If a truck has a route on a day it's unavailable, it counts as a **route
+conflict**. Move the route to another day, or give it to another truck or
+driver in [Dispatch](/docs/operations/routes).
+
+## Table view
+
+<Screenshot src="/images/system-resources/fleet-table.jpg" alt="Fleet, Table view" caption="① Table ② Search ③ All · On route · Idle · Unavailable ④ Capacity today ⑤ Today's route ⑥ Driver" />
+
+- **Search name, plate or facility** finds a truck.
+- Quick filters: **All**, **On route**, **Idle**, and **Unavailable**, each with
+  a count. Useful when you have many trucks.
+- Columns: **Truck** (name and plate), **Facility**, **Length**, **Height**,
+  **Pallets**, **Weight (lb)**, **Capacity today** (pallets free and used),
+  **Today's route** (with stops done), **Driver**, **Status**, and **Routes
+  (7 days)**.
+- **⋮** on a row: **View**, **Edit**, and **Add unavailability**.
+
+<Screenshot src="/images/system-resources/fleet-row-menu.jpg" alt="Truck row menu" caption="① View · Edit · Add unavailability" />
+
+## Schedule truck unavailability
+
+Mark a truck as unavailable when it's out for maintenance, repair, inspection,
+and so on. While it's unavailable it isn't used for routing, and Dispatch warns
+about routes on it.
+
+<Steps>
+  <Step>
+    ### Click Add unavailability
+    Click **Add unavailability** at the top of Fleet, on a truck's row menu, on
+    from the shortcut on an empty day in the Availability view, or on the truck's page.
+  </Step>
+  <Step>
+    ### Fill in the details
+    | Field | Notes |
+    | --- | --- |
+    | **Truck** * | The truck. |
+    | **From** * · **To** * | The dates. *Past dates are allowed for record-keeping.* |
+    | **Reason** * | **Maintenance**, **Repair**, **Inspection**, **Breakdown**, **Accident**, **Tires**, **Registration / permits**, **No driver**, **Reserved / loaned**, **Weather**, or **Other**. |
+    | **Note** | Optional, for example *Brake repair*. Use it to explain **Other**. |
+
+    <Screenshot src="/images/system-resources/fleet-add-unavailability.jpg" alt="Add unavailability" caption="① Truck ② From · To ③ Reason ④ Note ⑤ Save" />
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**. The unavailability shows in the Availability view and on
+    the truck's page.
+  </Step>
+</Steps>
+
+### Edit or remove an unavailability
+
+Click the unavailability bar (or the **pencil** on the truck's page) to open
+**Edit unavailability**. Change the details and click **Save**, or click
+**Remove**. The confirmation explains what happens, for example *Removes
+inspection from Oct 23, 2026 to Oct 24, 2026. Dispatch stops warning about it.*
+
+<Carousel images={[
+  {"src": "/images/system-resources/fleet-edit-unavailability.jpg", "alt": "Edit unavailability", "caption": "① Remove"},
+  {"src": "/images/system-resources/fleet-remove-unavailability.jpg", "alt": "Remove unavailability", "caption": "① Confirm removal"},
+]} />
+
+## Truck page
+
+Click a truck's name to open its page.
+
+<Screenshot src="/images/system-resources/fleet-truck-page.jpg" alt="Truck page" caption="① Status ② Add unavailability · Edit · ⋮ ③ Specs ④ Upcoming routes ⑤ Unavailability" />
+
+- The status badge, for example **Available**.
+- **Specs**: facility, license plate, length, height, capacity, and weight
+  capacity.
+- **Upcoming routes**: date, route, driver, stops, and capacity.
+- **Unavailability**: past and upcoming periods with **Reason**, **Note**, and
+  **Added by**. Use the **pencil** to edit and the **bin** to remove.
+- **⋮** → **Delete truck**.
+
+## Add a truck
+
+<Steps>
+  <Step>
+    ### Click New truck
+    Click **+ New truck**. The **New truck** window opens.
+  </Step>
+  <Step>
+    ### General details
+    Enter the **Truck name** *, **License plate** *, and **Facility** *.
+  </Step>
+  <Step>
+    ### Size and capacity
+    Enter **Length (ft)** *, **Height** (ft * and in), **Capacity (pallets)** *,
+    and **Weight capacity (lb)** *. *Height is used to check clearance on stops.
+    Capacity sets the pallet limit shown on routes.*
+  </Step>
+  <Step>
+    ### Unavailability (optional)
+    Click **Add a period it's unavailable** to add dates when the truck can't be
+    used yet, for example while you wait for its registration.
+  </Step>
+  <Step>
+    ### Create
+    Click **Create truck**.
+
+    <Screenshot src="/images/system-resources/fleet-new-truck.jpg" alt="New truck" caption="① General details ② Size and capacity ③ Unavailability ④ Create truck" />
+  </Step>
+</Steps>
+
+<Callout type="info" title="Rental trucks">
+  There's no separate rental option yet. To cover for a truck that's out, add
+  the rental as a new truck (for example name it *Rental …*), plan routes on it,
+  and give it an unavailability once it's returned. The team suggested keeping
+  rental trucks in the records for history rather than deleting them, and a
+  rental tag was discussed as a future addition.
+</Callout>
+
+<Callout type="info">
+  Truck height and capacity feed [Route Restrictions](/docs/operations/routes/route-restrictions).
+  The dashboard's **Fleet Availability for Today** widget shows how many trucks
+  are available today.
+</Callout>

@@ -1,0 +1,183 @@
+---
+title: BOLs (Bills of Lading)
+description: Find and filter Bills of Lading in the Board or Table view, see how long each BOL has been in its stage, and understand BOL stages.
+---
+
+The **BOLs** page manages all **Bills of Lading**. A BOL is created
+automatically when a [work order](/docs/operations/work-orders) is saved, and
+tracks the job from pickup through to invoicing. BOLs can also be created
+directly for [walk-ins](/docs/operations/bols/walk-in-bols).
+
+<UIPath items={["Operations", "BOLs"]} />
+
+The page has two views: **Table** (one long list) and **Board** (one column per
+stage). The summary cards, search, and filters work the same in both.
+
+<Screenshot src="/images/operations/bols/table.jpg" alt="BOLs page, Table view" caption="① Summary cards ② Facility · Date ③ Board / Table ④ New walk-in BOL ⑤ Search ⑥ Stage · Time in stage · Type · Customer ⑦ Project · Customer type ⑧ Sort ⑨ Columns" />
+
+## Summary cards
+
+The cards at the top give a quick count for the selected facility and dates:
+
+| Card | Shows |
+| --- | --- |
+| **Labels pending receiving** | Labels still to be received, and on how many BOLs. |
+| **Labels pending triage** | Labels still to be triaged, and on how many BOLs in processing. |
+| **Labels pending sorting and counting** | Labels still to be sorted and counted. |
+| **Unmatched labels** | Labels that didn't match in triage (*All labels matched* when there are none). |
+| **Ready for sign off** | BOLs waiting for sign-off, with the oldest one's age. |
+| **Over stage limit** | BOLs that have been in their stage longer than the [stage limit](/docs/system-resources/configuration/bol-stage-limits), and across how many stages. |
+
+## Facility, dates, and view
+
+- **Facility**: the facility filter now sits at the top of the page (it used to
+  be in the Filters panel). If you're assigned to only one facility, you only
+  see that facility's data.
+- **Date**: **Today**, **Last 7 Days**, **Last 15 Days**, **Last 30 Days**, or
+  **Custom Range…**. The Board view opens on **Last 7 Days**.
+- **Board** / **Table**: switch views.
+- **New walk-in BOL**: start a [walk-in BOL](/docs/operations/bols/walk-in-bols).
+
+## Search and filter
+
+| Tool | Use |
+| --- | --- |
+| **Search BOL #** · **Search invoice #** · **Search location** | Find a BOL by number, invoice number, or location name or address. |
+| **Stage** | Tick one or more stages (**Waiting for pickup**, **Pickup completed**, **In processing**, **Ready for sign off**, **Signed off**, **Invoiced**) and click **Apply**. |
+| **Time in stage** | **All**, **Over limit**, **Due soon**, or **On track**, each with a count. See [Time in stage](#time-in-stage). |
+| **Type** | **Any**, **Work order**, or **Walk-in**. |
+| **Customer** | Show one customer's BOLs. |
+| **Project** | Show one project's BOLs. |
+| **Customer type** | **Any**, **Residential**, or **Commercial**. |
+| **Sort** | **Longest in stage** or **Newest first**. |
+
+Applied filters show as chips above the list, for example *Status: In
+processing*. Click **×** on a chip, or **Clear all**.
+
+<Carousel images={[
+  {"src": "/images/operations/bols/stage-filter.jpg", "alt": "Stage filter", "caption": "① Stage filter with Clear and Apply"},
+  {"src": "/images/operations/bols/time-in-stage-filter.jpg", "alt": "Time in stage filter", "caption": "① All · Over limit · Due soon · On track"},
+]} />
+
+## Table view
+
+| Column | Shows |
+| --- | --- |
+| **BOL** | **No.** (click to open), **Type** (*Work order* or *Walk-in*), **Date**, route, and **Facility**. |
+| **Customer** | Name and type (*Commercial* / *Residential*). |
+| **Location** | Location name and address. |
+| **Receiving** | Labels scanned, for example *0/0 scanned*. |
+| **Triage** | **matched**, **unmatched**, and **pending** labels, or *Not started*. |
+| **Sort & count** | Progress, or *Not started*. |
+| **Stage** | The BOL's current stage. |
+| **In stage** | How long it has been in that stage, for example **Over by 7d 19h**. |
+| **GD** | Shown when the BOL is linked to guaranteed destruction. |
+
+Click the **Columns** icon to choose which columns to show (**BOL**,
+**Customer**, **Location**, **Receiving**, **Triage**, **Sort & count**,
+**Facility**, **Stage**, **In stage**), or **Reset to default**. With many
+columns, scroll the table sideways.
+
+<Screenshot src="/images/operations/bols/columns.jpg" alt="Select Columns" caption="① Select Columns · Reset to default ② Columns icon" />
+
+Hover over a row to show two icons:
+
+- the **quick view** icon opens the BOL in a side panel (see below),
+- **⋮** opens **View**, **Print labels**, **Export**, and **Delete** (some
+  actions are only available for some stages).
+
+<Screenshot src="/images/operations/bols/row-menu.jpg" alt="BOL row menu" caption="① View · Print labels · Export · Delete" />
+
+## Board view
+
+The **Board** shows one column per stage, with the number of BOLs and how many
+are over the limit or due soon (for example *16 over*). Use it to see at a
+glance what's waiting in each stage.
+
+<Screenshot src="/images/operations/bols/board.jpg" alt="BOLs Board view" caption="① Board ② Last 7 Days ③ One column per stage with counts" />
+
+Each card shows:
+
+<Screenshot src="/images/operations/bols/board-card.jpg" alt="BOL cards" caption="① BOL number, time in stage, GD ② Customer, location, address, date, facility ③ Work order / Walk-in · Commercial / Residential ④ Receiving · Triage · Sort & count ⑤ Red border = over the stage limit" />
+
+- the **BOL number**, a **time in stage** badge, and **GD** for guaranteed
+  destruction,
+- the **customer**, the **location** name and address, the **date**, and the
+  **facility**,
+- the **route** (when there is one),
+- **Work order** or **Walk-in**, and **Commercial** or **Residential**,
+- **Receiving**, **Triage**, and **Sort & count** label counts. Triage shows
+  *Starts after receiving*, and Sort & count *Starts after triage*, until they
+  begin.
+
+Cards that are over their stage limit have a **red border**.
+
+## BOL quick view
+
+Click a card on the Board, or the quick view icon on a Table row, to open the
+BOL in a panel on the right. The rest of the page is dimmed while the panel is
+open. To close it, click **✕** or click anywhere outside the panel. The panel
+shows the hint *↑ ↓ to move* for moving between BOLs with the arrow keys.
+
+<Screenshot src="/images/operations/bols/drawer.jpg" alt="BOL quick view" caption="① Stage, time in stage, GD ② Type · Date · Facility · In stage ③ Stage stays ④ Open full page" />
+
+The panel shows:
+
+- **Type**, **Date**, **Facility**, and **In stage**,
+- **Stage stays**: each stage with when the BOL entered it and how long it took
+  (for example *Took 1m*) or how long so far. Stages it hasn't reached show
+  *Not reached*. A walk-in BOL starts at **In processing**, so the pickup stages
+  show *Not reached*.
+- the **limit** for the current stage (for example *Limit for Waiting for
+  pickup: 2h · warn 1h before*),
+- **Labels**: how many labels have been received.
+
+Click **Open full page** to open the [BOL page](/docs/operations/bols/bol-details).
+
+<Screenshot src="/images/operations/bols/drawer-limit.jpg" alt="Stage limit and labels" caption="① Limit for the current stage ② Labels" />
+
+## Time in stage
+
+Every BOL tracks how long it has been in its current stage. The time counts from
+the BOL's first entry into the stage, so moving back and forth doesn't reset
+it. Your admin sets a limit and a warning time for each stage in
+[BOL stage limits](/docs/system-resources/configuration/bol-stage-limits).
+
+| Badge | Meaning |
+| --- | --- |
+| **Over by …** (red) | Over limit: the BOL has passed the stage limit. |
+| **Due in …** (amber) | Due soon: the BOL is inside the warning window. |
+
+Use **Time in stage → Over limit** to list the BOLs that need action first.
+While this filter is on, the **Over stage limit** card is highlighted.
+
+<Screenshot src="/images/operations/bols/table-over-limit.jpg" alt="Over limit BOLs" caption="① Time in stage: Over limit ② Stage ③ In stage ④ Quick view and row menu on hover" />
+
+<Callout type="info">
+  The clock for **Waiting for pickup** starts when the BOL is created with its
+  work order. Scheduling and routing future pickups is done on
+  [Work orders](/docs/operations/work-orders) and
+  [Dispatch](/docs/operations/routes), so set this limit to suit how far ahead
+  you schedule.
+</Callout>
+
+## BOL stages
+
+A BOL moves through these stages:
+
+<Steps>
+  <Step>**Waiting for pickup**: the work order is scheduled.</Step>
+  <Step>**Pickup completed**: the driver has collected the items.</Step>
+  <Step>**In processing**: the items are being received, triaged, and sorted in the warehouse.</Step>
+  <Step>**Ready for sign off**: processing is done and waiting for sign-off.</Step>
+  <Step>**Signed off**: an invoice can now be generated.</Step>
+  <Step>**Invoiced**: the invoice has been created. This is the final stage.</Step>
+</Steps>
+
+## In this section
+
+<Cards>
+  <Card title="Managing BOL Details" href="/docs/operations/bols/bol-details" />
+  <Card title="Documents & Invoicing" href="/docs/operations/bols/bol-documents" />
+  <Card title="Walk-in BOLs" href="/docs/operations/bols/walk-in-bols" />
+</Cards>

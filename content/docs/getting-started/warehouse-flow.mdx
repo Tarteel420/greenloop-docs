@@ -1,0 +1,61 @@
+---
+title: Processing Items Through the Warehouse
+description: How received items move through receiving, triage, and sorting & counting, and where to follow progress on the BOL.
+---
+
+When a driver brings materials to a facility (or a customer drops them off
+as a [walk-in](/docs/operations/bols/walk-in-bols)), items move through the
+warehouse according to each category's **processing workflow**.
+
+## The processing stages
+
+<Steps>
+  <Step>
+    ### Receiving
+    The **Receiver** unloads the truck, scans each item by its QR label, and
+    enters it in the system. Every item starts at receiving.
+  </Step>
+  <Step>
+    ### Triage
+    If the category requires it, bulk materials (such as Gaylord containers) go
+    to **Triage** to be processed and prepared for sorting.
+  </Step>
+  <Step>
+    ### Sorting & Counting
+    Materials are separated and categorized, for example into batteries,
+    electronics, or metals.
+  </Step>
+</Steps>
+
+<Callout type="info">
+  An item only goes as far as its category's workflow says. If no extra stage
+  is set, the Receiver's entry completes the flow. Categories show their
+  workflow as a badge such as **S&C** or **Triage → S&C**. See
+  [Categories](/docs/catalog/categories).
+</Callout>
+
+## Follow progress on the BOL
+
+<UIPath items={["Operations", "BOLs", "open a BOL"]} />
+
+The BOL list has label counters for each stage:
+
+| Column | Counters |
+| --- | --- |
+| **Receiving Labels** | Labels · Scanned · Pending |
+| **Triage Labels** | Labels · Matched · Unmatched · Pending |
+| **Sort & Count Labels** | Total · Scanned · Pending |
+
+Open a BOL to see its processing steps: **Pickup/drop-off information →
+Labels Information → Summary**. Each label shows what the Receiver, Triage, and
+Sort & Count users entered.
+
+<Screenshot src="/images/operations/bols/step-2-labels.jpg" alt="Labels Information step" caption="① Search by label number / Triage status ② New label ③ A label ④ Receiving details for that label" />
+
+→ [BOL Details](/docs/operations/bols/bol-details)
+
+## Next
+
+<Cards>
+  <Card title="Generating an Invoice" href="/docs/getting-started/generating-invoice" />
+</Cards>

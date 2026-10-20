@@ -1,0 +1,68 @@
+---
+title: Approvals
+description: Follow pricing changes that need sign-off, from submission to approval.
+---
+
+The **Approvals** module handles workflow-based decisions, for example a new
+customer price tier or a new project quote that needs sign-off before it takes
+effect. Who needs approval is set in
+[Approval Rules](/docs/system-resources/configuration/approval-rules).
+
+<UIPath items={["Customer Management", "Approvals"]} />
+
+## Tabs
+
+<Screenshot src="/images/customer-management/approvals-inbox.jpg" alt="Approvals: My inbox" caption="My inbox · Submitted by me · All approvals" />
+
+| Tab | Shows |
+| --- | --- |
+| **My inbox** | Requests waiting on you, with **Customer**, **Type**, **Step**, **Role**, and **Status**. When empty: *Nothing is waiting on you.* |
+| **Submitted by me** | Requests you submitted. |
+| **All approvals** | Every request, with **Customer**, **Type**, **Status**, and **Submitted** date and time. |
+
+<Screenshot src="/images/customer-management/approvals-all.jpg" alt="All approvals" caption="① Status (for example In Progress, Approved) ② Open" />
+
+Examples of request **Type**: *New customer price tier*, *New project quote*.
+
+## Open a request
+
+Click **Open** on a row. The details page shows the request's version (for
+example **Version 1**) and status (for example **In Progress** or **Approved**).
+
+<Screenshot src="/images/customer-management/approval-detail.jpg" alt="Approval details" caption="① Summary ② Approval progress ③ Legend" />
+
+| Section | Contents |
+| --- | --- |
+| **Summary** | **Type**, **Customer**, **Submitted by**, and the **Project** or **Pricing type** (for example *Branch Base*). |
+| **Approval progress** | Each approver step, with the person, their role (for example *Sales Manager*), and the step's status. Steps are shown in order when several approvals are needed. |
+| Pricing table | The items being changed, with **Category**, **Current**, and **Proposed** prices (and **Threshold** where it applies). |
+
+Click the **ⓘ** icon to see the status legend: **Pending**, **Approved**,
+**Rejected**, **Mixed**, **Not needed**, and **You** (your step).
+
+<Carousel images={[
+  {"src": "/images/customer-management/approval-legend.jpg", "alt": "Status legend", "caption": "Status legend"},
+  {"src": "/images/customer-management/approval-detail-approved.jpg", "alt": "Approved step", "caption": "① Step approved ② View comment"},
+]} />
+
+When an approver has left a comment on their step, click **View comment** to
+read it.
+
+## What an approver does
+
+Approvers review the request from **My inbox**, then approve or reject it and
+can add comments for audit tracking.
+
+<Callout type="info">
+  The approve / reject controls only show for the approver of the current step.
+  They were not visible to the account used to write this guide, so they are not
+  shown here.
+</Callout>
+
+## After approval
+
+If the customer has **Require customer consent** switched on, an approved quote
+must then be sent to the customer and accepted before it becomes their price
+tier. See [Pricing & Quotes](/docs/customer-management/pricing-and-quotes#require-customer-consent).
+Linking a general price tier that has **Need approval on customer linking**
+switched on also creates an approval request. → [General Price Tiers](/docs/pricing-billing/general-price-tiers)

@@ -1,0 +1,137 @@
+---
+title: Leads
+description: Find, filter, and create leads. Quick-filter tabs, filters, columns, quick view, and bulk actions.
+---
+
+<UIPath items={["Lead Management", "Leads"]} />
+
+<Screenshot src="/images/lead-management/leads-list.jpg" alt="Leads list" caption="① New lead ② Import ③ Date (last activity) ④ Quick-filter tabs ⑤ Search and filters ⑥ Columns" />
+
+The **Leads** list shows each **Lead** (name and email), **Company**, **Status**,
+**Assignee**, **Source**, and **Next follow-up**. You can change a lead's
+**Status** and **Assignee** directly from the row. In **Next follow-up**, a
+**Cold** badge marks a lead that has gone cold, and **+ Schedule** adds a
+follow-up.
+
+## Quick-filter tabs
+
+Each tab shows its count.
+
+| Tab | Shows |
+| --- | --- |
+| **All open** | Every lead that hasn't been converted to a prospect. |
+| **My leads** | Open leads assigned to you. |
+| **Unassigned** | Open leads with no one assigned. |
+| **New this week** | Leads created this week. |
+| **Going cold** | Leads close to their cold limit (the **Warn before** period). |
+| **Cold** | Leads that have passed their cold limit. |
+| **Converted** | Leads already promoted to prospect, with a **Promoted** date. |
+
+When a lead goes cold is set per lead status. See
+[Lead Statuses](/docs/system-resources/configuration/general#lead-statuses).
+
+## Search and filter
+
+| Tool | Use |
+| --- | --- |
+| **Search leads…** | Find a lead by name or email. |
+| **Status**, **Assignee**, **Source**, **Tags**, **Created** | Filter the list. Pick one or more values and click **Apply**. |
+| **More** | **State** (the lead's address state), **Has open follow-up**, and **Has no activities**. |
+| **Date** | Filter by **Last activity**: **Today**, **Last 7 days**, **Last 30 days**, **This quarter**, or **Custom**. |
+
+Applied filters appear as chips under the filter bar, for example *Assigned to:
+Ahmed Hassan Khan, Ammar Khalid*. Click **×** on a chip to remove it, or **Clear
+all** to remove every filter.
+
+To keep a set of filters for daily use, save it as a view. See
+[Saved Views](/docs/lead-management/saved-views).
+
+## Choose columns
+
+Click the **Columns** icon to show or hide columns. **Lead** is always shown.
+You can add **Last activity**, **Created**, **Phone**, **Tags**, **Category**,
+and **Job title**. Click **Reset to default** to go back to the standard
+columns.
+
+<Screenshot src="/images/lead-management/leads-columns.jpg" alt="Columns menu" caption="① Columns ② Reset to default" />
+
+## Quick view
+
+Click a lead to open the quick view on the right, without leaving the list.
+You can move from one lead to the next by clicking another row.
+
+<Screenshot src="/images/lead-management/leads-quick-view.jpg" alt="Lead quick view" caption="① Open full page ② Status, assignee, source, and cold badge ③ Call, Email, Edit, Promote to prospect ④ Next step" />
+
+The quick view shows:
+
+- The lead's **status**, **assignee**, **source**, and a **Cold** badge if it
+  has gone cold.
+- Actions: **Call** (choose a number from the arrow), **Email**, **Edit**, and
+  **Promote to prospect**.
+- **Next step**: the next scheduled follow-up, or **Schedule follow-up**.
+- **Email**, **Phone**, **Mobile**, **Industry**, **Location**, **Created**, tags,
+  and **Recent activity**.
+
+Click **Open full page** to see everything about the lead. See
+[Lead Details](/docs/lead-management/lead-details).
+
+## Row menu
+
+Hover over a row to show the **phone** icon and **⋮**. The **⋮** menu has
+**View** (quick view), **Open full page**, **Edit**, **Schedule follow-up**,
+**Promote to prospect**, and **Delete**.
+
+<Screenshot src="/images/lead-management/leads-row-menu.jpg" alt="Lead row menu" caption="① Row menu" />
+
+## Bulk actions
+
+Tick the box on one or more rows to show the bulk action bar: **Assign to**,
+**Change status**, **Add tags**, and **Delete**. Click **Clear selection** to
+untick all rows.
+
+<Screenshot src="/images/lead-management/leads-bulk-actions.jpg" alt="Bulk actions" caption="① Bulk action bar" />
+
+<Callout type="info">
+  Leads created or imported without an assignee land on the **Unassigned** tab.
+  Use that tab, the bulk **Assign to** action, or **Assign** on the
+  [Leads Overview](/docs/lead-management/leads-overview), to hand them out.
+</Callout>
+
+## Create a lead
+
+<Steps>
+  <Step>
+    ### Click New lead
+    On the Leads page, click **New lead**. The **Create a new lead** page opens.
+  </Step>
+  <Step>
+    ### Enter the basic information
+    Enter the contact's **First name**, **Last name**, **Email**, **Job title**,
+    **Company**, **Website**, phone numbers, and the secondary contact and
+    recipient details.
+
+    <Screenshot src="/images/lead-management/lead-form.jpg" alt="Create a new lead" caption="① Basic information ② Lead details" />
+  </Step>
+  <Step>
+    ### Enter the lead details
+    Choose the **Status** (the default lead status is pre-selected), **Assigned
+    to**, **Source**, **Industry**, **Lead category**, **No. of employees**, and
+    **Tags**.
+  </Step>
+  <Step>
+    ### Add the address and extra information
+    Fill in the **Address** and the **Description** under **Additional
+    information**. Click **New note** to add notes. *Notes added here are saved
+    once you save the lead.*
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**. The lead appears in the Leads list.
+  </Step>
+</Steps>
+
+<Callout type="info">
+  Which lead fields are required (marked *) is set in
+  [Required/Optional Fields → Lead Fields](/docs/system-resources/configuration/required-optional-fields).
+  Lead statuses are set in [General → Lead Statuses](/docs/system-resources/configuration/general#lead-statuses).
+</Callout>

@@ -1,0 +1,20 @@
+{
+  "title": "Getting Started",
+  "icon": "Rocket",
+  "root": true,
+  "pages": [
+    "index",
+    "what-is-greenloop",
+    "key-concepts",
+    "user-roles",
+    "initial-setup",
+    "navigating-greenloop",
+    "dashboard",
+    "the-greenloop-workflow",
+    "---Quickstart---",
+    "first-customer",
+    "first-work-order",
+    "warehouse-flow",
+    "generating-invoice"
+  ]
+}

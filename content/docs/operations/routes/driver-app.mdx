@@ -1,0 +1,53 @@
+---
+title: Driver Mobile Application
+description: The separate Android app drivers use for pickups, navigation, and labels.
+---
+
+Drivers do not use the web system. They work through a separate **Android mobile
+application**.
+
+<Callout type="info">
+  This page is based on the GreenLoop reference guide. The mobile app itself
+  can't be viewed from the web system.
+</Callout>
+
+## Signing in and loading routes
+
+When a driver signs in, the app automatically loads **all routes assigned for
+that day**.
+
+The application provides:
+
+- Route information
+- Google Maps navigation
+- Pickup and drop-off details from the work order
+
+On the web **Dispatch** page ([Classic view](/docs/operations/routes#classic-view)), the driver column shows whether the driver has been
+notified and whether they have downloaded the route (for example *Never
+notified*, *Not downloaded*). In the Board view, use the route's **⋮ → Driver → Notify driver**. → [Dispatch](/docs/operations/routes)
+
+## Printing labels
+
+Drivers use a **thermal printer** connected to the app to generate **QR code
+labels**. Each label contains:
+
+- Label Number
+- Item Information
+- Packaging Information
+- Customer Information
+
+The label is printed and attached to the Gaylord, bin, box, or other packaging.
+
+## Working offline
+
+<Callout type="info">
+  The app must be **online to download routes initially**. Once routes are
+  loaded, it can keep operating **without an internet connection**.
+</Callout>
+
+## Syncing back
+
+When the route is completed, all updates made by the driver are synchronized
+back to the associated [BOL](/docs/operations/bols/bol-details). You can follow
+the driver's route with **Driver trail** on the [Dispatch](/docs/operations/routes)
+page.

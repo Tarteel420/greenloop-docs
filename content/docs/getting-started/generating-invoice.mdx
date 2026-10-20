@@ -1,0 +1,59 @@
+---
+title: Generating an Invoice
+description: How a signed-off BOL becomes an invoice through QuickBooks.
+---
+
+Once items are processed, the recorded quantities and weights can be billed.
+Invoices are created through **QuickBooks**.
+
+<UIPath items={["Operations", "BOLs"]} />
+
+<Steps>
+  <Step>
+    ### Find signed-off BOLs
+    Open **Operations → BOLs**. Click **Stage**, tick **Signed off**, and click
+    **Apply**. Only signed-off BOLs are shown. In the **Board** view, signed-off
+    BOLs are in the **Signed off** column.
+
+    <Screenshot src="/images/operations/bols/stage-filter.jpg" alt="Stage filter" caption="The Stage filter lists every BOL stage." />
+  </Step>
+  <Step>
+    ### Open the BOL and review it
+    Click the BOL number. In the **Details** tab, all three steps
+    (**Pickup/drop-off information**, **Labels Information**, **Summary**) show a
+    green tick, with **Signed off by** and **Date & time**. Click **Review
+    steps** to go back through the processed items.
+  </Step>
+  <Step>
+    ### Click Generate invoice
+    Click **Generate invoice**. Greenloop sends the invoice request to QuickBooks.
+
+    <Screenshot src="/images/operations/bols/generate-invoice.jpg" alt="Generate invoice" caption="① Status Signed off ② Generate invoice" />
+  </Step>
+  <Step>
+    ### Check the documents
+    When the BOL is **Invoiced**, click **View BOL Documents** to see the
+    invoice and other documents.
+    → [BOL Documents](/docs/operations/bols/bol-documents)
+  </Step>
+</Steps>
+
+## Documents you can access
+
+For invoiced BOLs, the documents can include:
+
+- Invoice
+- Bill of lading (BOL)
+- Certificate of Recycling
+- Certificate of Destruction
+
+<Callout type="info">
+  Pricing comes from the price tier linked to the customer, plus any
+  surcharges. Billing is by [subcategory](/docs/catalog/subcategories). See
+  [Pricing & Billing](/docs/pricing-billing).
+</Callout>
+
+## You've completed onboarding 🎉
+
+You now know the full cycle. Explore any module from the top navigation, or go
+back to [The Greenloop Workflow](/docs/getting-started/the-greenloop-workflow).

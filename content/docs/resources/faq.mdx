@@ -1,0 +1,64 @@
+---
+title: FAQ
+description: Common questions about using Greenloop.
+---
+
+## Who can create users?
+
+Only the **Org Admin** — no other role can, not even an Admin. Users are managed
+in the separate **Accesswise** application. See
+[User Management](/docs/user-management).
+
+## Is billing based on categories or subcategories?
+
+Always **subcategories**, never main categories. See
+[Subcategories](/docs/catalog/subcategories).
+
+## Do drivers use the web system?
+
+No. Drivers use a separate **Android mobile app**. See the
+[Driver Mobile Application](/docs/operations/routes/driver-app).
+
+## What is the difference between a branch and a facility?
+
+A **branch** is a demographic grouping (e.g. a state); a **facility** is a
+physical warehouse under a branch. See [Facilities](/docs/system-resources/facilities).
+
+## What happens when I save a work order?
+
+A **pickup activity** for the driver and a **BOL** are created automatically. See
+[Work Order Flow](/docs/operations/work-orders/work-order-flow).
+
+## How are invoices generated?
+
+Through **QuickBooks**, from the BOL. See
+[Generating an Invoice](/docs/getting-started/generating-invoice).
+
+## When does a pricing change need approval?
+
+When a general price tier has **Need approval on customer linking** ticked, or
+when the change is made by a role or person listed in
+[Approval Rules](/docs/system-resources/configuration/approval-rules). Requests
+appear in the approver's **My inbox**. See
+[Approvals](/docs/customer-management/approvals).
+
+## What is customer consent?
+
+When **Require customer consent** is on for a customer, an approved quote must
+be sent to the customer and accepted before it becomes their price tier. See
+[Pricing & Quotes](/docs/customer-management/pricing-and-quotes#require-customer-consent).
+
+## What is the difference between Status and Tags?
+
+**Status** is the lifecycle stage (Lead, Prospect, Customer, Inactive,
+Archived). **Tags** are configurable labels. See
+[Tags](/docs/system-resources/configuration/general#tags) and
+[Lifecycle Transitions](/docs/system-resources/configuration/general#lifecycle-transitions).
+
+## How do I record items a customer drops off without a work order?
+
+Create a [Walk-in BOL](/docs/operations/bols/walk-in-bols) from the Dashboard.
+
+## How do I remove a duplicate customer?
+
+Merge it into the correct profile with [Merge Jobs](/docs/customer-management/merge-jobs).

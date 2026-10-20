@@ -1,0 +1,53 @@
+---
+title: Projects
+description: Group work orders under a structured execution plan for a customer.
+---
+
+Projects group [work orders](/docs/operations/work-orders) under a structured
+execution plan, so large or repeated operations can be tracked together. A
+project has its own pricing (a project quote).
+
+<UIPath items={["Customer Management", "Projects"]} />
+
+## What a project includes
+
+- **Timeline**: start and end date
+- **Customer association**
+- **Work orders and BOL tracking**
+- **Pricing information** (price mode *National Contract* or *Branch Based*)
+- **Notes and updates**
+
+## Projects list
+
+Projects are grouped in the **Pending**, **Active**, **Completed**, and
+**Rejected** tabs, with **Project Name**, **Customers**, **Start Date**, and
+**End Date**. Search by project, filter by **Customers** or **Date range**, and
+use **⋮ → View** to open a project.
+
+<Screenshot src="/images/customer-management/projects-list.jpg" alt="Projects list" caption="① Pending · Active · Completed · Rejected ② View" />
+
+## Create a project
+
+Projects are created from the customer's page: **Details → Pricing → + New
+Project Quote**. See
+[Create a project quote](/docs/customer-management/pricing-and-quotes#create-a-project-quote).
+
+## Project page
+
+The project page shows the status (for example **Pending**) and, if the
+project's pricing is waiting for sign-off, the banner **An approval is
+pending.** Click the banner's link icon to open the approval.
+
+<Screenshot src="/images/customer-management/project-detail.jpg" alt="Project page" caption="① Approval status ② Work orders: Add / List ③ BOLs: List" />
+
+| Area | Contents |
+| --- | --- |
+| **Work orders** | Count of work orders. **Add** creates a work order for this project, **List** shows them. |
+| **BOLs** | Count of BOLs, with **List**. |
+| **Project information** | Project name, Customer, Pricing mode, Address, Start date, End date, Description. |
+| **Notes** tab | Notes on the project. |
+
+<Callout type="info">
+  When creating a work order, you can associate it with a project so all related
+  work is tracked together. → [Creating a Work Order](/docs/operations/work-orders/creating-a-work-order)
+</Callout>

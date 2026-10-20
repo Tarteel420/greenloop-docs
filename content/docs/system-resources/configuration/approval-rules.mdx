@@ -1,0 +1,48 @@
+---
+title: Approval Rules
+description: Choose who needs approval before their price tier and project pricing changes take effect.
+---
+
+<UIPath items={["Configuration", "Approval Rules"]} />
+
+**Approval Rules** decide who needs approval before their changes take effect.
+Changes from everyone else are applied right away.
+
+<Screenshot src="/images/configuration/approval-rules.jpg" alt="Approval Rules" caption="① Pricing rule toggle ② Roles that need approval ③ People who need approval ④ Save changes" />
+
+## How the Pricing rule works
+
+With **Pricing** turned on, only the roles and people listed need approval for
+**price tier and project pricing changes**. The on-screen explanation:
+
+> A price under the branch's threshold goes for approval. Anything at or above
+> it is applied right away.
+
+See also **Pricing & Billing → Branch Threshold Pricing**. That page is only
+available to roles that have been given permission to it.
+
+## Set up the rule
+
+<Steps>
+  <Step>
+    ### Turn on Pricing
+    Switch on the **Pricing** toggle.
+  </Step>
+  <Step>
+    ### Choose roles
+    In **Roles that need approval**, pick one or more roles (for example
+    **Sales**). This applies to anyone with the role.
+  </Step>
+  <Step>
+    ### Choose people (optional)
+    In **People who need approval**, pick specific users. This applies whatever
+    their role is. **They can never approve their own change.**
+  </Step>
+  <Step>
+    ### Save
+    Click **Save changes**.
+  </Step>
+</Steps>
+
+Requests go to the approvers' **My inbox**. Follow them in
+[Approvals](/docs/customer-management/approvals).

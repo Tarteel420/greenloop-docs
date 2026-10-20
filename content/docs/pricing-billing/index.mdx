@@ -1,0 +1,42 @@
+---
+title: Overview
+description: Create, manage, and assign price tiers, plus adjustments, surcharges, and templates.
+---
+
+The Pricing & Billing module is used to create, manage, and assign **price
+tiers** to customers. It also covers price adjustments, additional surcharges,
+and the templates used when sharing pricing with customers.
+
+<Screenshot src="/images/getting-started/nav-pricing-menu.jpg" alt="Pricing & Billing menu" caption="Price tiers → General / Customer specific, Price adjustments, Branch Threshold Pricing, Additional Surcharge, Templates" />
+
+<Callout type="warn">
+  All pricing is defined at the **subcategory** (sub type) level, because
+  [billing is based on subcategories](/docs/catalog/subcategories).
+</Callout>
+
+## In this module
+
+<Cards>
+  <Card title="General Price Tiers" href="/docs/pricing-billing/general-price-tiers" description="Reusable tiers linked to many customers." />
+  <Card title="Customer-Specific Price Tiers" href="/docs/pricing-billing/customer-specific-price-tiers" description="Tiers built for one customer." />
+  <Card title="Price Adjustments" href="/docs/pricing-billing/price-adjustments" description="Increase or decrease prices by a percentage." />
+  <Card title="Additional Surcharges" href="/docs/pricing-billing/surcharges" description="Fuel, service, and environmental fees." />
+  <Card title="Templates" href="/docs/pricing-billing/basic-template" description="The structure used to send prices to customers." />
+</Cards>
+
+<Callout type="info">
+  The menu also has **Branch Threshold Pricing**, which works with
+  [Approval Rules](/docs/system-resources/configuration/approval-rules). It is
+  only available to roles with permission to it and isn't covered in this guide.
+</Callout>
+
+## How pricing reaches a customer
+
+1. Create a [general](/docs/pricing-billing/general-price-tiers) or
+   [customer-specific](/docs/pricing-billing/customer-specific-price-tiers) price tier.
+2. On the customer's page, create a
+   [price tier quote](/docs/customer-management/pricing-and-quotes#create-a-price-tier-quote).
+3. If required, the quote goes through [Approvals](/docs/customer-management/approvals)
+   and then [customer consent](/docs/customer-management/pricing-and-quotes#require-customer-consent).
+4. Use [Send pricing](/docs/customer-management/pricing-and-quotes#send-pricing)
+   to email the current prices, laid out by the [Basic Template](/docs/pricing-billing/basic-template).

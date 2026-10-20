@@ -1,0 +1,158 @@
+---
+title: Customer-Specific Price Tiers
+description: Price tiers created for a single customer, per branch or as a national contract.
+---
+
+Customer-Specific Price Tiers are created for an individual customer.
+
+<UIPath items={["Pricing & Billing", "Price tiers", "Customer specific"]} />
+
+<Screenshot src="/images/pricing-billing/cs-list.jpg" alt="Customer specific price tiers" caption="① Customers · Price mode · Expiry till filters ② Price Mode" />
+
+The list shows each tier's **Name**, **Customer**, **Price Mode** (for example
+*Branch Base* or *National Contract*), and **Expiry Till**. Filter by
+**Customers**, **Price mode**, or **Expiry till**. Click a tier to open it.
+
+## Create a customer-specific tier
+
+<Steps>
+  <Step>
+    ### Start from the customer
+    On the customer's page, click **+ Create Price Tier Quote**, choose **Type:
+    Customer Specific**, and click **+ New customer specific/national
+    contract**. The **Customer** is filled in for you. See
+    [Create a price tier quote](/docs/customer-management/pricing-and-quotes#create-a-price-tier-quote).
+
+    <Screenshot src="/images/pricing-billing/cs-new.jpg" alt="New customer specific price tier" caption="① Customer (pre-filled) ② Name ③ Effective / Expiry date · Effective immediately after customer consent ④ Price mode ⑤ Copy prices ⑥ Import Prices From" />
+  </Step>
+  <Step>
+    ### Fill in the details
+    | Field | Notes |
+    | --- | --- |
+    | **Customer** | Pre-filled, with the customer's address. |
+    | **Name** * | Name of the tier. |
+    | **Effective date** · **Expiry date** * | Or tick **Effective immediately after customer consent**. |
+    | **Price mode** * | For example **Branch Base** or **National Contract**. |
+  </Step>
+  <Step>
+    ### Start from existing prices (optional)
+    - If the customer already has an active tier, a banner says *This customer
+      has an active price tier expiring … — copy its prices as a starting point
+      for this quote.* Click **Copy prices**.
+    - Or click **Import Prices From** and choose a **Base template** (an existing
+      [general price tier](/docs/pricing-billing/general-price-tiers)), then
+      click **Ok**.
+
+    <Screenshot src="/images/pricing-billing/cs-copy-banner.jpg" alt="Copy prices banner" caption="① Active tier banner ② Copy prices ③ Import Prices From" />
+
+    After copying, the banner turns green and an **Adjust prices** button
+    appears, so you can raise or lower the copied prices in one go. See
+    [Adjust copied prices](#adjust-copied-prices).
+
+    <Screenshot src="/images/pricing-billing/import-prices.jpg" alt="Import Prices From" caption="① Base template ② Ok" />
+  </Step>
+  <Step>
+    ### Enter the prices
+    Add a **Branch** with **+ New**, then enter a price for each **Sub type** in
+    each **Category**, as for [general tiers](/docs/pricing-billing/general-price-tiers#create-a-general-price-tier).
+  </Step>
+  <Step>
+    ### Save
+    Save the tier.
+  </Step>
+</Steps>
+
+## Adjust copied prices
+
+Use **Adjust prices** to change many copied prices at once by a percentage or a
+dollar amount, for example to renew a contract with a 2% increase. You no longer
+have to edit every price by hand.
+
+<Screenshot src="/images/pricing-billing/cs-prices-copied.jpg" alt="Prices copied" caption="① Prices copied banner ② Adjust prices ③ Load all · Add individually ④ Copied prices" />
+
+<Steps>
+  <Step>
+    ### Copy the prices
+    On the new customer-specific tier, click **Copy prices** in the banner. The
+    banner changes to *Prices copied from the active price tier expiring …
+    Increase or decrease them by a percentage or dollar amount before submitting
+    this quote.*
+  </Step>
+  <Step>
+    ### Open Adjust prices
+    Click **Adjust prices**. The **Adjust prices** window opens: *Apply a
+    percentage or dollar change to prices*.
+
+    <Screenshot src="/images/pricing-billing/cs-adjust-prices.jpg" alt="Adjust prices window" caption="① Select scope ② Change ③ Preview ④ Apply" />
+  </Step>
+  <Step>
+    ### 1. Select scope
+    - **Entire price tier**: *All branches, categories and sub types*.
+    - **Specific branches and categories**: *Pick branches, then narrow to
+      categories if needed*. Tick or untick the **Branches** and
+      **Categories** chips. Each chip shows how many prices it holds. Use
+      **Clear** or **Select all**. A line below confirms what is included, for
+      example *Applies to 1 category in 1 branch · 17 prices*.
+
+    <Screenshot src="/images/pricing-billing/cs-adjust-specific.jpg" alt="Specific branches and categories" caption="① Specific branches and categories ② Branches ③ Categories" />
+  </Step>
+  <Step>
+    ### 2. Change
+    Choose **+** (increase) or **−** (decrease), enter the amount, and choose
+    **%** (percentage) or **$** (dollar amount).
+
+    <Carousel images={[
+      {"src": "/images/pricing-billing/cs-adjust-preview.jpg", "alt": "Percentage change and preview", "caption": "① +2 % ② Preview: current, new, and change ③ Prices round to the nearest cent ④ Apply"},
+      {"src": "/images/pricing-billing/cs-adjust-dollar.jpg", "alt": "Dollar change", "caption": "① +$2 ② Preview with the dollar change"},
+    ]} />
+  </Step>
+  <Step>
+    ### 3. Check the preview
+    The **Preview** groups prices by branch and category, with the **Current**
+    range, the **New** range, and the **Change**. Click a category to open it:
+
+    - Untick a sub type to leave its price unchanged.
+    - Click a sub type's change (for example **+2%**) to set its **Own change**,
+      such as +1% for one item while the rest get +2%. The category then shows
+      **Mixed** and *1 custom*. Click **Reset** to go back to the shared change.
+
+    *Prices round to the nearest cent.*
+
+    <Screenshot src="/images/pricing-billing/cs-adjust-own-change.jpg" alt="Own change for one sub type" caption="① Sub type change ② Own change · Reset ③ Mixed" />
+  </Step>
+  <Step>
+    ### Apply
+    Click **Apply to … prices**. A message confirms, for example *Changed 17
+    prices*, with **Undo**. The banner now says *Changed 17 prices — open Adjust
+    prices to change or remove it*, and the new prices show in the sub type
+    fields.
+
+    <Screenshot src="/images/pricing-billing/cs-adjust-applied.jpg" alt="Prices changed" caption="① Changed 17 prices · Undo ② Banner ③ New prices" />
+  </Step>
+  <Step>
+    ### Finish the tier
+    Enter the **Name**, **Effective date**, and **Expiry date** (for example a
+    whole year for the new contract), check the prices, and save. You can still
+    change any single price by hand before saving.
+  </Step>
+</Steps>
+
+<Callout type="info">
+  Adjust prices only changes the new tier you are creating. It doesn't change
+  the customer's current tier. To raise prices across many tiers at once, use
+  [Price Adjustments](/docs/pricing-billing/price-adjustments).
+  The QA check above stopped before saving, so no tier was created.
+</Callout>
+
+## View a tier
+
+<Screenshot src="/images/pricing-billing/cs-detail.jpg" alt="Customer specific tier details" caption="① Tier details ② Price mode ③ Branch" />
+
+## Saving and approval
+
+<Callout type="warn">
+  Whether a new tier needs approval depends on
+  [Approval Rules](/docs/system-resources/configuration/approval-rules). Changes
+  from roles or people listed there go to [Approvals](/docs/customer-management/approvals);
+  changes from everyone else are applied right away.
+</Callout>

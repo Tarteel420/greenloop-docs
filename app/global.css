@@ -1,0 +1,203 @@
+﻿@import 'tailwindcss';
+@import 'fumadocs-ui/css/vitepress.css';
+@import 'fumadocs-ui/css/preset.css';
+
+html {
+  scrollbar-gutter: stable;
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
+
+/* --- Greenloop: docs top navigation polish --- */
+@media (min-width: 1024px) {
+  #nd-subnav .flex-1 {
+    justify-content: flex-start;
+  }
+  #nd-subnav .flex-1 > div:first-child {
+    margin-right: auto;
+    gap: 1.25rem;
+  }
+}
+
+/* --- Greenloop: clean, left-aligned docs nav links --- */
+@media (min-width: 1024px) {
+  #nd-subnav button[data-search-full] {
+    display: none !important;
+  }
+  #nd-subnav .flex-1 {
+    justify-content: flex-start !important;
+  }
+  #nd-subnav .flex-1 > div:first-child {
+    margin-right: auto !important;
+    flex-wrap: nowrap !important;
+    gap: 1.5rem !important;
+  }
+  #nd-subnav .flex-1 > div:first-child > a {
+    white-space: nowrap !important;
+  }
+}
+
+/* --- Greenloop: restore the search box, on the right --- */
+@media (min-width: 1024px) {
+  #nd-subnav button[data-search-full] {
+    display: inline-flex !important;
+    order: 10 !important;
+    flex: 0 0 auto !important;
+    width: 220px !important;
+    margin-left: 0.75rem !important;
+  }
+}
+
+/* --- Greenloop: screenshot & image styling --- */
+.gl-doc-image,
+.gl-screenshot img {
+  display: block;
+  width: 100%;
+  max-width: 760px;
+  height: auto;
+  border: 1px solid var(--color-fd-border, #e5e7eb);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+.gl-doc-image {
+  margin: 1.5rem auto;
+}
+.gl-screenshot {
+  margin: 1.5rem 0;
+}
+.gl-screenshot img {
+  margin: 0 auto;
+}
+.gl-screenshot figcaption {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-fd-muted-foreground, #6b7280);
+}
+
+/* --- Greenloop: image carousel --- */
+.gl-carousel { margin: 1.5rem 0; }
+.gl-carousel-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.gl-carousel-img {
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  border: 1px solid var(--color-fd-border, #e5e7eb);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.08);
+}
+.gl-carousel-arrow {
+  flex: 0 0 auto;
+  width: 2rem; height: 2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-fd-border, #e5e7eb);
+  background: var(--color-fd-background, #fff);
+  color: var(--color-fd-foreground, #111);
+  font-size: 1.25rem; line-height: 1;
+  cursor: pointer;
+}
+.gl-carousel-arrow:hover { background: var(--color-fd-accent, #f3f4f6); }
+.gl-carousel-caption {
+  margin: 0.5rem 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-fd-muted-foreground, #6b7280);
+}
+.gl-carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+.gl-carousel-dot {
+  width: 0.5rem; height: 0.5rem;
+  border-radius: 9999px;
+  border: none;
+  background: var(--color-fd-border, #d1d5db);
+  cursor: pointer;
+  padding: 0;
+}
+.gl-carousel-dot.active { background: var(--color-fd-primary, #16a34a); }
+.gl-carousel-count {
+  margin-left: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--color-fd-muted-foreground, #6b7280);
+}
+
+/* --- Greenloop: click-to-enlarge screenshots --- */
+.gl-screenshot-trigger {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+.gl-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  cursor: zoom-out;
+}
+.gl-lightbox img {
+  max-width: min(1400px, 96vw);
+  max-height: 86vh;
+  width: auto;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+.gl-lightbox p {
+  margin: 0;
+  color: #f3f4f6;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.gl-screenshot img { max-width: 900px; }
+
+/* --- Greenloop: "Where:" navigation path --- */
+.gl-uipath {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0.75rem 0 1.25rem;
+  font-size: 0.875rem;
+}
+.gl-uipath-label {
+  font-weight: 600;
+  color: var(--color-fd-muted-foreground, #6b7280);
+  margin-right: 0.15rem;
+}
+.gl-uipath-item {
+  display: inline-block;
+  padding: 0.1rem 0.55rem;
+  border: 1px solid var(--color-fd-border, #e5e7eb);
+  border-radius: 9999px;
+  background: var(--color-fd-secondary, #f9fafb);
+  font-weight: 500;
+}
+.gl-uipath-sep {
+  margin: 0 0.3rem;
+  color: var(--color-fd-muted-foreground, #9ca3af);
+}
+
+/* numbered legend under annotated screenshots */
+.gl-legend { font-size: 0.9rem; }

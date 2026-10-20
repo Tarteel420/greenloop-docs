@@ -1,0 +1,47 @@
+---
+title: Facilities
+description: Physical warehouse locations where items are received, grouped under branches.
+---
+
+Facilities are the physical warehouses where all items are received. Employees,
+trucks, and work orders are assigned to them.
+
+## Branches vs. facilities
+
+- A **Branch** is a regional grouping, for example a state.
+- A **Facility** is a physical warehouse, and every facility belongs to a branch.
+
+> Example: an organization with two warehouses in Minnesota has *Minnesota* as a
+> branch and two *facilities* under it.
+
+## Where facilities are managed
+
+Branches and facilities are managed in **Accesswise**, which has **Branches**
+and **Facilities** tabs.
+
+<UIPath items={["Avatar", "Access Management", "Facilities"]} />
+
+## Facility fields
+
+| Field | Description |
+| --- | --- |
+| Name | Facility name |
+| Address | Street address |
+| City | City |
+| State | State |
+| Zip code | Postal code |
+
+## Where facilities are used in Greenloop
+
+| Screen | How the facility is used |
+| --- | --- |
+| [Work orders](/docs/operations/work-orders/creating-a-work-order) | **Facility** is required. |
+| [Walk-in BOLs](/docs/operations/bols/walk-in-bols) | **Facility** is required. |
+| [Routes](/docs/operations/routes) | You plan routes for one **Facilities** selection at a time. |
+| [Trucks](/docs/system-resources/trucks) | Each truck belongs to one facility. |
+| [Customers](/docs/customer-management/creating-customers) / [Price tiers](/docs/pricing-billing/general-price-tiers) | These screens say **Branches**. Prices can be set per branch. |
+
+<Callout type="info">
+  Facility assignment also controls user access. See
+  [Creating Users](/docs/user-management/creating-users).
+</Callout>

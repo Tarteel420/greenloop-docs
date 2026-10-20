@@ -1,0 +1,38 @@
+---
+title: Route Suggestions
+description: How Greenloop suggests routes based on truck availability.
+---
+
+Greenloop can **suggest routes** based on truck availability, helping you place
+work orders efficiently.
+
+## Where you see suggestions
+
+<Tabs items={["Creating a work order", "Dispatch", "Map view"]}>
+  <Tab value="Creating a work order">
+    In the **Estimation** section, click **Route Suggestion** to see routes for
+    the **Next 7 / 15 / 30 / 60 days**, and select one.
+    → [Creating a Work Order](/docs/operations/work-orders/creating-a-work-order)
+
+    <Screenshot src="/images/operations/work-orders/new-10-route-suggestions.jpg" alt="Suggested routes" caption="① Next 7 / 15 / 30 / 60 days ② Auto-calculated pallets" />
+  </Tab>
+  <Tab value="Dispatch">
+    On the **Dispatch** page ([Classic view](/docs/operations/routes#classic-view)), click **Route suggestion** to get
+    suggestions for the selected facility and date.
+  </Tab>
+  <Tab value="Map view">
+    In **Map** view, click **Suggest routes**.
+  </Tab>
+</Tabs>
+
+## When no trucks are available
+
+If no truck can take part, Greenloop shows the message *No valid trucks are
+available to take part in route suggestion*.
+
+<Screenshot src="/images/operations/routes/suggestion-toast.jpg" alt="No valid trucks message" caption="① Route suggestion ② Message" />
+
+<Callout type="info">
+  Truck availability comes from [Fleet](/docs/system-resources/trucks), where
+  you set each truck's facility, capacity, and **unavailability**.
+</Callout>

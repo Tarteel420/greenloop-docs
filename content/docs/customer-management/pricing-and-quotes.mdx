@@ -1,0 +1,158 @@
+---
+title: Pricing & Quotes
+description: Customer consent, price tier quotes, project quotes, and sending pricing to a customer.
+---
+
+Each customer's pricing is managed at the bottom of the customer's **Details**
+tab. From here you create **price tier quotes** and **project quotes**, send
+them for customer consent, and email the current pricing to the customer.
+
+<UIPath items={["Customer Management", "Customers", "customer", "Details", "Pricing"]} />
+
+<Screenshot src="/images/customer-management/customer-pricing-section.jpg" alt="Require customer consent and Pricing section" caption="① Require customer consent ② Create Price Tier Quote ③ New Project Quote ④ Current / History" />
+
+## Require customer consent
+
+The **Require customer consent** toggle is pre-filled from the **Organization
+default** (see [Pricing & Quotes configuration](/docs/system-resources/configuration/general#pricing--quotes)).
+The app explains it as follows:
+
+> When on, an approved quote for this customer must be sent to them and accepted
+> before it becomes their price tier. When off, internal approval is the last
+> step and the quote is scheduled straight away. Each quote remembers the
+> setting it was created under, so changing this never affects a quote already
+> in progress.
+
+Internal approval still applies either way. A quote that needs approval under
+your [approval rules](/docs/system-resources/configuration/approval-rules) goes
+for approval first, whether or not customer consent is required.
+
+### When a customer differs from the organization default
+
+If you change the toggle so it no longer matches the organization default, the
+card shows a **Custom** badge and the line *Your organization default is On*
+(or *Off*). Click **Reset to org default** to go back to the organization
+setting.
+
+<Screenshot src="/images/customer-management/customer-consent-custom.jpg" alt="Custom consent setting" caption="① Custom badge ② Organization default and Reset to org default ③ Toggle" />
+
+## Pricing cards
+
+The **Current** tab shows a card for each price tier and project quote. The
+badge shows its state, for example **Current Tier** (*Currently in force for
+this customer*) or **Requires Customer Consent** (*Project in progress for this
+customer*). **History** lists earlier tiers and quotes.
+
+<Screenshot src="/images/customer-management/customer-pricing-cards.jpg" alt="Pricing cards" caption="① Send pricing ② Send for Customer Consent ③ History of this tier" />
+
+| Button | What it does |
+| --- | --- |
+| **Send pricing** | *Email the current pricing to the customer. No approval link, no status change.* Opens the pricing template preview (see [below](#send-pricing)). |
+| **Send for Customer Consent** | Sends a quote that is waiting for consent to the customer. |
+| History icon | Shows the history of that tier or quote. |
+
+Project quote cards also show the **Scope** (for example *All branches (flat
+price)* or *Fox Branch (specific branch)*), the **Project Period**, and how many
+items are overridden (for example **1 ITEM OVERRIDE →**).
+
+## Create a price tier quote
+
+<Steps>
+  <Step>
+    ### Click Create Price Tier Quote
+    In the **Pricing** section, click **+ Create Price Tier Quote**. The **Amend
+    Price Tier Quote** window opens for the customer.
+  </Step>
+  <Step>
+    ### Choose the type and tier
+    Choose the **Type**:
+
+    - **General**: pick an existing general price tier in **Name**.
+    - **Customer Specific**: pick a customer-specific tier, or click **+ New
+      customer specific/national contract** to create one. When the customer
+      already has an active tier, you can copy its prices and raise or lower
+      them by a percentage or dollar amount. See
+      [Adjust copied prices](/docs/pricing-billing/customer-specific-price-tiers#adjust-copied-prices).
+
+    <Carousel images={[
+      {"src": "/images/customer-management/price-tier-quote-general.jpg", "alt": "Amend Price Tier Quote, General", "caption": "General: ① Type ② Name ③ Effective date ④ Effective immediately after customer consent ⑤ Expiry date ⑥ Save"},
+      {"src": "/images/customer-management/price-tier-quote-cs.jpg", "alt": "Amend Price Tier Quote, Customer Specific", "caption": "Customer Specific: ① Type ② New customer specific/national contract"},
+    ]} />
+  </Step>
+  <Step>
+    ### Set the dates
+    Enter the **Effective date** first, then the **Expiry date** (both
+    required), or tick **Effective immediately after customer consent**.
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**. Depending on your [approval rules](/docs/system-resources/configuration/approval-rules),
+    the quote may need internal approval (see [Approvals](/docs/customer-management/approvals)).
+    - If **Require customer consent** is **off**, the new tier is scheduled
+      straight away (no email to the customer).
+    - If it's **on**, click **Send for Customer Consent** on the new card to
+      email it to the customer. It becomes their price tier once accepted.
+  </Step>
+</Steps>
+
+## Create a project quote
+
+<Steps>
+  <Step>
+    ### Click New Project Quote
+    In the **Pricing** section, click **+ New Project Quote**. The **Create new
+    project** page opens with the **Customer** pre-filled.
+
+    <Screenshot src="/images/customer-management/project-quote-form.jpg" alt="Create new project" caption="① Customer (pre-filled) ② Project name ③ Price mode ④ Start / End date" />
+  </Step>
+  <Step>
+    ### Fill in the project
+    | Field | Notes |
+    | --- | --- |
+    | **Project name** * | Required. |
+    | **Price mode** * | **National Contract** or **Branch Based**. |
+    | **Opportunity** | Link the project to an [opportunity](/docs/customer-management/opportunities). |
+    | **Start date** · **End date** | The project period. |
+    | **Description** · **Notes** | Free text. |
+  </Step>
+  <Step>
+    ### Save
+    Save the project. It appears as a card in the **Pricing** section and under
+    [Projects](/docs/customer-management/projects).
+  </Step>
+</Steps>
+
+## Send pricing
+
+Click **Send pricing** on a price tier card to open the **Pricing Template**
+page. It shows the customer's prices per branch, laid out using the
+[Basic Template](/docs/pricing-billing/basic-template).
+
+<Screenshot src="/images/pricing-billing/send-pricing-preview.jpg" alt="Pricing template preview" caption="① Back ② Edit Template ③ Send ④ Prices per branch" />
+
+<Steps>
+  <Step>
+    ### Review the prices
+    Check the prices shown for each branch.
+  </Step>
+  <Step>
+    ### Edit the template (optional)
+    Click **Edit Template** to change the layout for this customer. Use **Add
+    Item** to add categories or items and **Notes** to add notes. Click **Update
+    Template** to keep your changes, **Restore to Basic Template** to start over,
+    or **Cancel**.
+
+    <Screenshot src="/images/pricing-billing/send-pricing-edit.jpg" alt="Editing the pricing template" caption="① Restore to Basic Template ② Update Template ③ Add Item ④ Notes" />
+  </Step>
+  <Step>
+    ### Send
+    Click **Send** to email the pricing to the customer. Sent emails appear in
+    the customer's [Emails tab](/docs/customer-management/customer-details#emails).
+  </Step>
+</Steps>
+
+<Callout type="info">
+  Price tiers themselves are created under
+  [Pricing & Billing](/docs/pricing-billing). Branch Threshold Pricing is also
+  listed there, but it isn't covered in this guide.
+</Callout>

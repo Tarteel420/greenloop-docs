@@ -1,0 +1,318 @@
+---
+title: Dispatch (Routes)
+description: Plan the day's routes on the Board, schedule work orders from the Calendar, and manage routes and stops.
+---
+
+**Dispatch** (previously **Routes**) is where dispatchers plan the locations a
+driver visits during a trip. You work on **one facility at a time**.
+
+<UIPath items={["Operations", "Dispatch"]} />
+
+Dispatch has four views: **Board** (new), **Classic**, **Map**, and
+**Calendar** (updated). **Classic** is kept for a while so dispatchers can get
+used to the new screens; it will be removed later.
+
+<Screenshot src="/images/operations/routes/dispatch-board.jpg" alt="Dispatch, Board view" caption="① Board · Classic · Map · Calendar ② Route suggestion · New route ③ Facility · Drivers · Sales people ④ Date ⑤ Fleet summary ⑥ Unplanned stops ⑦ Route card ⑧ Stops" />
+
+## Board view
+
+The **Board** shows one day. Pick the **Facility** (*remembered for all
+Operations pages*), and optionally a driver (**All drivers**) and sales person
+(**All sales people**). Use **‹ ›**, the date, or **Today** to change day.
+
+- The **Fleet** bar shows the day's totals: trucks out (for example *1 of 1
+  trucks out*), pallets used and the percentage, pallets free, drivers free, and
+  how many trucks *Have room* or are *Available*.
+- **Unplanned stops** on the left lists the day's work orders that aren't on a
+  route yet. Search by customer or address and sort (for example **Sort: Time
+  window**). Click **‹** to collapse the panel.
+- Each **route card** shows the route name, the driver status (**Not
+  notified**, **Notified**, or **Downloaded**), the mileage, the truck (name,
+  pallets, and clearance height), the driver, and a **Capacity** bar (for example
+  *11.2 / 100 pallets*).
+- Each **stop** shows its order number, the customer, the location and address,
+  the clearance height, the sales rep (**Rep**), the service **Window**, and the
+  pallets (**Plt**). **GD** marks guaranteed destruction.
+
+### Create a route
+
+<Steps>
+  <Step>
+    ### Click New route
+    Click **+ New route** at the top, or **New route** on an empty day.
+  </Step>
+  <Step>
+    ### Fill in the route
+    Enter the **Route name** *, check the **Date** * (the facility is shown),
+    choose the **Truck** *, and optionally the **Driver**. Each truck shows its
+    pallets, height, and weight, and warns if it's unavailable on a date (for
+    example *Unavailable Oct 28*). You no longer need to create the route first
+    and assign the driver afterwards.
+
+    <Screenshot src="/images/operations/routes/dispatch-new-route.jpg" alt="New route" caption="① Route name ② Date ③ Facility ④ Truck ⑤ Driver ⑥ Create route" />
+  </Step>
+  <Step>
+    ### Create
+    Click **Create route**. The new card shows *No stops* until you add some.
+
+    <Screenshot src="/images/operations/routes/dispatch-route-empty.jpg" alt="New empty route" caption="① Not notified ② No stops · Add stops ③ Drag stops here, or use Add to route" />
+  </Step>
+</Steps>
+
+### Add stops to a route
+
+You can add stops in three ways:
+
+- **Drag and drop** a stop from **Unplanned stops** onto a route card.
+- Click **Add to route** on an unplanned stop and pick the route. The list shows
+  each route's pallets before and after, for example *0 → 5.6 / 100 pallets*.
+- Click **Add stops** on the route card, tick the stops, and click **Add stops**.
+  The window has **Unplanned**, **Planned**, and **All** tabs, a search by
+  customer, address, or city, sorting, and **Select all shown**. It shows the
+  pallets already loaded on the truck.
+
+<Carousel images={[
+  {"src": "/images/operations/routes/dispatch-unplanned.jpg", "alt": "Unplanned stop", "caption": "① Unplanned stop ② Add to route ③ New route"},
+  {"src": "/images/operations/routes/dispatch-add-to-route.jpg", "alt": "Add to route", "caption": "① Add to route ② Pick a route (pallets before → after)"},
+  {"src": "/images/operations/routes/dispatch-add-stops.jpg", "alt": "Add stops to route", "caption": "① Unplanned · Planned · All ② Search and sort ③ Tick stops ④ Add stops"},
+]} />
+
+A message confirms the change, for example *01 FOX-QA added to Docs test route
+as stop 1*, and the capacity bar, mileage, and fleet totals update.
+
+<Screenshot src="/images/operations/routes/dispatch-route-stop.jpg" alt="Route with a stop" caption="① Fleet totals ② Mileage ③ Capacity ④ Stop" />
+
+### Stop actions
+
+Click **⋮** on a stop:
+
+| Action | What it does |
+| --- | --- |
+| **Open work order** | Opens the stop's work order. |
+| **Unplan stop** | Takes the stop off the route and back to **Unplanned stops**. |
+| **Move up** · **Move down** | Changes the stop's order on the route. |
+
+You can also drag a stop from one route card to another to move it. In the
+sprint demo, the stop menu also offered moving a stop straight to another route
+of the same day. In our QA check there was only one route that day, so we
+couldn't confirm that option.
+
+<Screenshot src="/images/operations/routes/dispatch-stop-menu.jpg" alt="Stop menu" caption="① Open work order · Unplan stop · Move up · Move down" />
+
+### Route actions
+
+Click **⋮** on a route card:
+
+<Screenshot src="/images/operations/routes/dispatch-route-menu.jpg" alt="Route menu" caption="① Driver actions ② Route actions ③ Export · Driver trail · Delete route" />
+
+| Group | Actions |
+| --- | --- |
+| **Driver** | **Change driver**, **Clear driver**, **Notify driver…** (same as before). |
+| **Route** | **Rename**, **Change date**, **Restrictions** (see [Route Restrictions](/docs/operations/routes/route-restrictions)), **Recalculate mileage**. |
+| Other | **Export**, **Driver trail**, **Delete route**. |
+
+<Callout type="warn">
+  A route with a driver assigned can't be deleted. Greenloop shows *This route
+  has already been assigned to a driver, unable to delete this route*. Use
+  **Clear driver** first, then **Delete route**.
+</Callout>
+
+## Calendar view
+
+The **Calendar** (previously part of Classic) shows routes by **Month** or
+**Week**, with a **Needs scheduling** list on the right.
+
+<Screenshot src="/images/operations/routes/dispatch-calendar.jpg" alt="Dispatch, Calendar view" caption="① Calendar ② Month / week navigation ③ Week / Month ④ Route legend ⑤ Needs scheduling" />
+
+- Switch between **Week** and **Month**, move with **‹ ›**, or click **Today**.
+- Each route is a coloured chip on its day, with a legend at the top. Click a
+  route to open that day in the **Board** with the route highlighted, so you can
+  see its stops and locations.
+- Click **+** on a day to add a route for that day.
+
+<Carousel images={[
+  {"src": "/images/operations/routes/dispatch-calendar-grid.jpg", "alt": "Routes on the calendar", "caption": "① Route on a day ② + on a day ③ Schedule"},
+  {"src": "/images/operations/routes/dispatch-calendar-week.jpg", "alt": "Week view", "caption": "① Week ② Days ③ + on a day ④ Needs scheduling"},
+]} />
+
+### Needs scheduling
+
+**Needs scheduling** lists work orders that still need a route, with the BOL
+number, how overdue they are (for example *Overdue 5d*), and the pallets. Click
+**View all** for the full list.
+
+Click a work order to open its details in a side panel: the **pickup location**
+(with **Copy address** and **Open in maps**), the contact, the route status (for
+example *Not on a route · route date Oct 15, 2026*), the customer, project,
+sales rep, pallets, weight, guaranteed destruction, and drop-off items. Click
+**Open full page** to open the work order in a new tab.
+
+<Screenshot src="/images/operations/routes/dispatch-wo-drawer.jpg" alt="Work order panel" caption="① Pickup location and contact ② Route · Schedule ③ Open full page" />
+
+### Schedule a work order
+
+<Steps>
+  <Step>
+    ### Click Schedule
+    Click **Schedule** next to the work order (or in its side panel). The
+    **Schedule BOL #…** window shows the BOL and its pallets.
+
+    <Screenshot src="/images/operations/routes/dispatch-schedule.jpg" alt="Schedule BOL" caption="① BOL and pallets ② Route date ③ Routes on that date ④ Schedule" />
+  </Step>
+  <Step>
+    ### Choose the date
+    Use **‹ ›**, the date, or **Today** to pick the date agreed with the
+    customer. If you pick a different date from the work order's date, the
+    window becomes **Reschedule BOL #…** and asks for a **Reason for
+    rescheduling** *: **Rescheduled by us**, **Customer requested**, **Schedule
+    correction**, **Truck or driver unavailable**, **Site not ready**,
+    **Weather**, or **Other**, plus an optional **Note**.
+
+    <Screenshot src="/images/operations/routes/dispatch-reschedule.jpg" alt="Reschedule reason" caption="① Reason for rescheduling ② Note ③ Route date" />
+  </Step>
+  <Step>
+    ### Choose the route
+    The routes on that date are listed with truck, driver, stops, and the
+    pallets before and after (for example *5.6 → 11.2 / 100 pallets*). Search by
+    route, truck, or driver. Or choose **Create new route** and enter the
+    **Route name**, **Truck**, and **Driver**.
+
+    <Carousel images={[
+      {"src": "/images/operations/routes/dispatch-schedule-routes.jpg", "alt": "Routes on the date", "caption": "① Search ② Existing route with capacity ③ Create new route"},
+      {"src": "/images/operations/routes/dispatch-schedule-new-route.jpg", "alt": "Create new route while scheduling", "caption": "① Create new route ② Route name · Truck · Driver ③ Create route & reschedule"},
+    ]} />
+  </Step>
+  <Step>
+    ### Save
+    Click **Schedule** (or **Reschedule**, or **Create route & reschedule**).
+  </Step>
+</Steps>
+
+<Callout type="info">
+  The schedule window shows each route's truck, driver, stops, and pallets, but
+  not the cities of its stops. To check where a route goes, open it on the
+  Board. Showing route locations and a suggested route while scheduling was
+  requested in the demo as a future improvement.
+</Callout>
+
+## Classic view
+
+The **Classic** view is the original Routes screen. It works as before.
+
+<Screenshot src="/images/operations/routes/routes-page.jpg" alt="Classic view" caption="① Facilities ② Driver ③ Sales person ④ View ⑤ Date ⑥ Board / Classic / Map / Calendar ⑦ New route" />
+
+### Filters and dates
+
+Select a **Facilities** entry, and optionally a **Driver** and **Sales person**
+to narrow the list. Choose the view and date:
+
+- **View** menu: **Day**, **Work week**, **Week**, or **Month**.
+- Use **‹ ›** to move between dates, or **Today** to jump back.
+- Switch between **Board**, **Classic**, **Map**, and **Calendar** at the top.
+
+Work orders associated with **Guaranteed destruction** are highlighted.
+
+### Day view
+
+The day view lists **Unplanned stops** (work orders not yet on a route) and the
+**Routes** for the day.
+
+<Screenshot src="/images/operations/routes/day.jpg" alt="Day view" caption="① Route row ② Driver notification / download status ③ Move to route · Remove from route · Route suggestion ④ Collapse all" />
+
+| Column | Description |
+| --- | --- |
+| **Name** | Name of the route |
+| **Truck Name** | Assigned truck |
+| **Pallets** | Total pallets |
+| **Mileage (mi)** | Round trip from the facility to all stops and back |
+| **Driver** | Assigned driver, with the notification status (for example *Never notified*) and whether the driver has downloaded the route (for example *Not downloaded*) |
+
+<Callout type="info">
+  Mileage is calculated as a **round trip** from the facility to all assigned
+  locations and back to the facility.
+</Callout>
+
+#### Route details
+
+Expand a route to see its work orders, with **Services** (time window),
+**Customer** (name and sales rep), **Location**, and **Workorder** (**View
+workorder**, **Clearance height**, **Pallets**). Click **Collapse all** to close
+all routes.
+
+<Screenshot src="/images/operations/routes/day-expanded.jpg" alt="Expanded route" caption="① Work orders on the route ② Select ③ Route actions ④ Stop actions" />
+
+#### Move or remove stops
+
+Tick one or more work orders, then click **Move to route** or **Remove from
+route** above the list. You can also use **⋮** on a single stop.
+
+<Screenshot src="/images/operations/routes/stop-actions.jpg" alt="Stop actions" caption="Move to route / Remove from route" />
+
+### Route actions
+
+Click **⋮** on a route row for:
+
+<Screenshot src="/images/operations/routes/route-actions.jpg" alt="Route actions" caption="Route actions" />
+
+| Action | Use |
+| --- | --- |
+| **View details** | Open the route's details. |
+| **Driver trail** | See the driver's trail. |
+| **Assign driver** · **Clear assigned driver** | Set or remove the driver. |
+| **Rename route** | Change the route name. |
+| **Route restriction** | Turn capacity and clearance height restrictions on or off. → [Route Restrictions](/docs/operations/routes/route-restrictions) |
+| **Export** | Export the route. |
+| **Change route date** | Move the route to another date. |
+| **Reorder activities** | Change the order of the stops. |
+| **Recalculate Mileage** | Recalculate the round-trip mileage. |
+| **Delete route** | Delete the route. |
+
+### Create a route (Classic)
+
+<Steps>
+  <Step>
+    ### Click New route
+    Click **+ New route**. The **Create a New Route** window opens.
+  </Step>
+  <Step>
+    ### Name the route and choose trucks
+    Enter the **Route Name** and choose the **Trucks** (both required).
+
+    <Screenshot src="/images/operations/routes/new-route.jpg" alt="Create a New Route" caption="① Route Name ② Trucks ③ Create" />
+  </Step>
+  <Step>
+    ### Create
+    Click **Create**.
+  </Step>
+</Steps>
+
+### Month view
+
+In **Month** view, each day shows its routes. Click a route to preview its
+**Truck**, **Driver**, **Mileage**, **Pallets**, and locations, with a **Driver
+trail** link.
+
+<Carousel images={[
+  {"src": "/images/operations/routes/month.jpg", "alt": "Month view", "caption": "① Month view ② Previous / next ③ Routes on this day"},
+  {"src": "/images/operations/routes/month-preview.jpg", "alt": "Route preview", "caption": "① Truck · Driver · Mileage · Pallets ② Driver trail ③ Locations"},
+]} />
+
+## Map view
+
+Click **Map** to see routes on a map. Each route card shows the truck, mileage,
+driver status, and **Stops** (with time **Window**). You can:
+
+- click **+ Add stop** to add a stop,
+- drag a stop by its handle to reorder it,
+- click **Suggest routes** for suggestions,
+- click **Save** on the route card to keep your changes.
+
+<Screenshot src="/images/operations/routes/map.jpg" alt="Map view" caption="① Map ② Route card ③ Add stop ④ Drag to reorder ⑤ Suggest routes ⑥ Save" />
+
+## In this section
+
+<Cards>
+  <Card title="Route Suggestions" href="/docs/operations/routes/route-suggestions" />
+  <Card title="Route Restrictions" href="/docs/operations/routes/route-restrictions" />
+  <Card title="Driver Mobile Application" href="/docs/operations/routes/driver-app" />
+</Cards>

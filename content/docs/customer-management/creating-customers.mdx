@@ -1,0 +1,136 @@
+---
+title: Creating Customers
+description: Add commercial and residential customers step by step.
+---
+
+The customer module holds both **commercial** (business) and **residential**
+(individual) customers. The two forms collect different information.
+
+<UIPath items={["Customer Management", "Customers", "New customer"]} />
+
+<Steps>
+  <Step>
+    ### Click New customer
+    On the **Customers** page, click **New customer** and choose **Commercial**
+    or **Residential**.
+
+    <Screenshot src="/images/customer-management/new-customer-dropdown.jpg" alt="New customer menu" caption="① Commercial / Residential" />
+  </Step>
+</Steps>
+
+<Tabs items={["Commercial customer", "Residential customer"]}>
+<Tab value="Commercial customer">
+
+The **Create a new commercial customer** page has four sections: **Primary
+information**, **Addresses**, **Profile information**, and **Contacts**.
+
+<Steps>
+  <Step>
+    ### Primary information
+    <Screenshot src="/images/customer-management/commercial-primary.jpg" alt="Primary information" caption="① Customer name ② Sales rep ③ Status and Lead source ④ Toggles ⑤ Copy address buttons" />
+
+    | Field | Notes |
+    | --- | --- |
+    | **Customer name** * | Required. |
+    | **Parent company** | The parent customer, if any. |
+    | **Type** * | *Commercial* (pre-selected). |
+    | **Status** | Lifecycle stage. New customers created here are set to **Customer**. |
+    | **Lead source** | For example *Cold call*, *Customer called in*, *Referral*. |
+    | **Competitor** · **Doing Business As (DBA)** | Free text. |
+    | **Business unit** | From [Business Units](/docs/system-resources/configuration/general#business-units). |
+    | **Sales rep** | Opens the **Add Sales Rep** window (see below). |
+    | **EPA #** · **Website** | EPA number and website. |
+    | Toggles | **Send statement**, **Cooperate customer**, **Opportunity for old customer**, **Send COR with invoice** (Certificate of Recycling), **R2 Certified**, **Bill root parent**, **Create as vendor**. |
+  </Step>
+  <Step>
+    ### Add the sales rep(s)
+    Click the **Sales rep** field. In **Add Sales Rep**, choose the **Sales rep**,
+    their **Percentage** share, and **Region**. Click **+ Add Sales Rep** to split
+    the customer between several reps, then click **Add**.
+
+    <Screenshot src="/images/customer-management/add-sales-rep.jpg" alt="Add Sales Rep" caption="① Sales rep · Percentage · Region ② Add another rep ③ Add" />
+  </Step>
+  <Step>
+    ### Addresses
+    Enter the **Shipping** and **Billing** addresses (Address Line 1–2, City,
+    State, Zip Code, Country). Use **Copy Billing address** / **Copy Shipping
+    address** to copy one into the other.
+  </Step>
+  <Step>
+    ### Profile information
+    Set the operational and billing rules for the customer.
+
+    <Screenshot src="/images/customer-management/commercial-profile.jpg" alt="Profile information" caption="① Require customer consent ② Requires P.O # ③ Terms, hours, branches, surcharges, guaranteed destruction, tags" />
+
+    | Field | Notes |
+    | --- | --- |
+    | **Require customer consent** | *Pre-filled from your organization default. You can change it for this customer now or later from the customer page.* See [Pricing & Quotes](/docs/customer-management/pricing-and-quotes). |
+    | **Requires P.O #** · **P.O #** · **PO Expiry** | Purchase order rules. |
+    | **Payment Method** · **Payment Term** | Billing terms. |
+    | **Feet / Inches (Clearance Height)** | Clearance height at the customer's site. |
+    | **Starting hours** · **Ending hours** | Operating hours. |
+    | **Branches** | The branches that serve this customer. |
+    | **Additional surcharges** | From [Additional Surcharge](/docs/pricing-billing/surcharges). |
+    | **Guaranteed destruction** | **Hard Drives Only**, **All E-Waste**, **Asset Log on Hard Drives Only**, **Asset Log on All E-Waste Items**. |
+    | **Tags** | Labels from [Tags](/docs/system-resources/configuration/general#tags). |
+  </Step>
+  <Step>
+    ### Contacts
+    Click **Add Contact**. Choose the **Contact type** (**Primary**, **Account
+    Payable**, or **Secondary**), enter the **First name** (required), last name,
+    title, email, mobile, and **Phone #** (required), then click **Add**.
+
+    <Screenshot src="/images/customer-management/add-contact.jpg" alt="Add Contact details" caption="① Contact type ② Name ③ Mobile / Phone # ④ Add" />
+  </Step>
+  <Step>
+    ### Save
+    Click **Save** at the bottom of the page. The customer is created and you can
+    open it from the Customers list.
+
+    <Screenshot src="/images/customer-management/commercial-contacts.jpg" alt="Contacts section and Save" caption="① Add Contact ② Save" />
+  </Step>
+</Steps>
+
+</Tab>
+<Tab value="Residential customer">
+
+The **Create a new residential customer** page is shorter.
+
+<Screenshot src="/images/customer-management/residential-form.jpg" alt="Create a new residential customer" caption="① Customer name ② Status ③ Sales rep ④ Branches" />
+
+<Steps>
+  <Step>
+    ### General details
+    Enter the **Customer name** (required), choose the **Status** (required),
+    and optionally add the **Sales rep** and **Branches**.
+  </Step>
+  <Step>
+    ### Address details
+    Enter **Address line 1**, **City**, and **Country** (required), plus
+    Address line 2, State, and Zip code.
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**.
+  </Step>
+</Steps>
+
+</Tab>
+</Tabs>
+
+<Callout type="info" title="Status vs Tags">
+  **Status** (Lead, Prospect, Customer, Inactive, Archived) is the lifecycle
+  stage. **Tags** are configurable labels. To create a record at the Prospect
+  stage, use [Prospects → New prospect](/docs/customer-management/prospects).
+  Leads are created in [Lead Management](/docs/lead-management/leads).
+</Callout>
+
+<Callout type="info">
+  Which fields are required depends on
+  [Required/Optional Fields](/docs/system-resources/configuration/required-optional-fields).
+</Callout>
+
+## Next
+
+Manage everything about the customer on the tabbed
+[Customer Details](/docs/customer-management/customer-details) page.

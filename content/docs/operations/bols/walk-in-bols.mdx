@@ -1,0 +1,62 @@
+---
+title: Walk-in BOLs
+description: Create a BOL for items dropped off at a facility without a work order.
+---
+
+A **walk-in BOL** records items that a customer brings to a facility (in person
+or by courier) without a work order.
+
+<UIPath items={["Operations", "BOLs", "New walk-in BOL"]} />
+
+Click **New walk-in BOL** at the top of the [BOLs](/docs/operations/bols) page,
+or use the **Create Walk-in BOL** card on the [Dashboard](/docs/getting-started/dashboard).
+
+<Screenshot src="/images/dashboard/walkin-card.jpg" alt="Walk-in BOL card" caption="Click to start a walk-in BOL" />
+
+## Create a walk-in BOL
+
+<Steps>
+  <Step>
+    ### Choose the type
+    On **Create a new Walk-in BOL**, under **Customer details → Select type**,
+    choose **Residential** or **Commercial**.
+  </Step>
+  <Step>
+    ### Enter the customer details
+    <Tabs items={["Residential", "Commercial"]}>
+      <Tab value="Residential">
+        Choose the **Customers** (optional) and **Facility** (required). Under
+        **General details**, enter the **Name**, **Memo**, **Email**, and **Phone
+        number**. Under **Address details**, enter the address (**City**,
+        **State**, **Zip code**, and **Country** are required).
+
+        <Screenshot src="/images/operations/bols/walkin-residential.jpg" alt="Residential walk-in" caption="① Residential / Commercial ② Customer · Facility ③ General details ④ Address details" />
+      </Tab>
+      <Tab value="Commercial">
+        Choose the **Customers**, **Project**, and **Facility** (required), and
+        enter the **PO Number**, **EPA Number**, **Memo**, and **Guaranteed
+        destruction**. Under **Drop-off type**, choose **In person** (enter the
+        **Name**, required, plus Email and Phone number) or **Courier** (enter
+        the **Tracking id**).
+
+        <Screenshot src="/images/operations/bols/walkin-commercial.jpg" alt="Commercial walk-in" caption="① Customer · Project · Facility · PO · EPA · Memo · Guaranteed destruction ② Drop-off type ③ Continue" />
+      </Tab>
+    </Tabs>
+  </Step>
+  <Step>
+    ### Continue
+    Click **Continue**. The BOL is created with the status **In processing**.
+    Walk-in BOLs skip the pickup stages, so in the BOL's
+    [Stage stays](/docs/operations/bols#bol-quick-view) the pickup stages show
+    *Not reached*.
+  </Step>
+  <Step>
+    ### Add the labels
+    In **Labels Information**, click **+ New label** for each pallet or
+    container. → [Add a label](/docs/operations/bols/bol-details#add-a-label)
+
+    <Screenshot src="/images/operations/bols/walkin-in-processing.jpg" alt="Walk-in BOL in processing" caption="① In processing ② Labels Information ③ New label" />
+  </Step>
+</Steps>
+
+From here, the BOL is processed like any other. → [Managing BOL Details](/docs/operations/bols/bol-details)

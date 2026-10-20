@@ -1,0 +1,6 @@
+{
+  "title": "Catalog",
+  "icon": "BookMarked",
+  "root": true,
+  "pages": ["index", "categories", "subcategories", "assets", "packaging", "essentials"]
+}

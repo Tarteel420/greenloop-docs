@@ -1,0 +1,51 @@
+---
+title: Promoting Leads
+description: Move a qualified lead to the Prospect stage.
+---
+
+When a lead is qualified, promote it to **Prospect**.
+
+<Steps>
+  <Step>
+    ### Find the lead
+    Open **Lead Management → Leads** and search for the lead.
+  </Step>
+  <Step>
+    ### Choose Promote to prospect
+    Click **⋮** on the lead's row and choose **Promote to prospect**. You can
+    also click **Promote to prospect** in the lead's quick view or at the top of
+    the [full lead page](/docs/lead-management/lead-details).
+
+    <Screenshot src="/images/lead-management/leads-row-menu.jpg" alt="Lead row menu" caption="① Row menu with Promote to prospect" />
+  </Step>
+  <Step>
+    ### Check the Converted tab
+    Promoted leads are listed on the **Converted** tab with the status
+    **Converted** and a **Promoted** date column.
+
+    <Screenshot src="/images/lead-management/leads-promoted.jpg" alt="Converted tab" caption="① Converted tab ② Converted status" />
+  </Step>
+</Steps>
+
+<Callout type="warn" title="Who can promote">
+  Only roles allowed in [Lifecycle Transitions](/docs/system-resources/configuration/general#lifecycle-transitions)
+  can promote leads. If that page limits the allowed lead statuses, only leads
+  in those statuses can be promoted.
+</Callout>
+
+<Callout type="info">
+  The [Lead Conversions report](/docs/reports/lead-conversions) counts
+  converted leads as **New Prospect** or **Merged**. The confirmation step after
+  choosing **Promote to prospect** wasn't run while writing this guide, so its
+  options aren't shown here.
+</Callout>
+
+<Callout type="info" title="Notes and activities">
+  Per the sprint demo, a lead's notes and activities stay with the record when
+  it is promoted, so the sales rep keeps the history. This wasn't checked in
+  QA while writing this guide.
+</Callout>
+
+Next: manage the record as a [Prospect](/docs/customer-management/prospects).
+Promotions per sales rep show up in the
+[Lead Conversions report](/docs/reports/lead-conversions).

@@ -1,0 +1,170 @@
+---
+title: Customer Details
+description: The customer page, its header actions, and every tab.
+---
+
+Open a customer from the **Customers** list (or **View Details** in the quick
+view). Everything about the customer is on this page, organized in tabs.
+
+<UIPath items={["Customer Management", "Customers", "click a customer"]} />
+
+<Screenshot src="/images/customer-management/customer-detail-header.jpg" alt="Customer page header" caption="① Tabs (use › to scroll to more tabs) ② Make Inactive ③ Edit tags ④ Edit general information" />
+
+## Header actions
+
+| Action | What it does |
+| --- | --- |
+| **Tags** ✏️ | Add or remove the customer's tags. |
+| **Make Inactive** | Moves the customer to the **Inactive** status. Who can do this is set in [Lifecycle Transitions](/docs/system-resources/configuration/general#lifecycle-transitions). |
+
+## Tabs at a glance
+
+| Tab | Contents |
+| --- | --- |
+| [Details](#details) | General information, addresses, profile information, contacts, customer consent, and pricing |
+| [Activities](#activities) | Calls and meetings for this customer |
+| [Addresses](#addresses) | All shipping and billing locations |
+| [Notes](#notes) | Operational notes |
+| [Sub Customers](#sub-customers) | Customers grouped under this one |
+| [Emails](#emails) | Emails sent to the customer and their delivery status |
+| [Attachments](#attachments) | Uploaded files |
+| [Opportunities](#opportunities) | Deals for this customer |
+| [Lifecycle](#lifecycle) | The customer's lifecycle journey |
+| [Work Orders](#work-orders) | Pending and completed work orders |
+| [Projects](#projects) | The customer's projects |
+| [BOLs](#bols) | The customer's bills of lading |
+| [Transactions](#transactions) | Invoices and payments from QuickBooks |
+| [Line Items](#line-items) | Invoice line items |
+| [Sales Data](#sales-data) | QuickBooks sales summary |
+| [QuickBooks Linked Profile](#quickbooks-linked-profile) | Link or unlink the QuickBooks customer |
+
+## Details
+
+The **Details** tab shows **General information**, **Addresses**, **Profile
+Information**, and **Contacts**. Click the **pencil** icon on a card to edit it.
+In **Contacts**, click **+ New contact** to add a contact, or the pencil / bin
+icons to edit or delete one.
+
+<Screenshot src="/images/customer-management/customer-detail-contacts.jpg" alt="Contacts card" caption="① New contact ② Edit contact" />
+
+Below the contacts are the **Require customer consent** setting and the
+**Pricing** section (price tiers and project quotes). See
+[Pricing & Quotes](/docs/customer-management/pricing-and-quotes).
+
+## Activities
+
+Tabs **To Do**, **Completed**, **Cancelled**, and **All**, with filters for
+**Assigned user**, **Type**, search, and **Date range**. Click **New activity**
+to schedule one for this customer. → [Activities](/docs/customer-management/activities)
+
+<Screenshot src="/images/customer-management/tab-activities.jpg" alt="Activities tab" caption="① Status tabs ② New activity" />
+
+## Addresses
+
+A customer can have **multiple locations**, each with its own address and
+contact. Choose the **Address Type** (for example *Shipping Address*) to switch
+lists. The default address is marked **Default**. Click **New address** to add
+one, or use **⋮** on a row.
+
+<Screenshot src="/images/customer-management/tab-addresses.jpg" alt="Addresses tab" caption="① Address Type ② New address ③ Default address" />
+
+## Notes
+
+Operational instructions for the customer. Click **New note** to add one. Notes
+show who created them and when. They can be pinned and tagged (for example
+**Pickup**). Use **⋮** on a note for its actions. Switch between list and grid
+views with the icons next to **New note**.
+
+<Screenshot src="/images/customer-management/tab-notes.jpg" alt="Notes tab" caption="① New note ② Pinned note with tag" />
+
+## Sub Customers
+
+Customers grouped under this customer, with the same search, filter, and column
+tools as the main list. Click **New customer** to add one from here.
+
+<Screenshot src="/images/customer-management/tab-sub-customers.jpg" alt="Sub Customers tab" caption="① New customer" />
+
+## Emails
+
+Emails sent to the customer (for example invoices and price tiers), with
+**Subject**, **From**, **To & Delivery Status** (for example *Accepted*),
+**Message Date**, and **Engagement**. Filter by **Status**.
+
+<Screenshot src="/images/customer-management/tab-emails.jpg" alt="Emails tab" caption="① Status filter ② Delivery status" />
+
+## Attachments
+
+Files attached to the customer, with **Size**, **Uploaded at**, and **Uploaded
+by**. Click **Upload** to add a file. Use **⋮** on a row for its actions.
+
+<Screenshot src="/images/customer-management/tab-attachments.jpg" alt="Attachments tab" caption="① Upload ② Row menu" />
+
+## Opportunities
+
+This customer's opportunities (**Opportunity**, **Date**, **Sales Rep**,
+**Projected Total**, **Status**, **Actual Total**). Click **New opportunity**.
+→ [Opportunities](/docs/customer-management/opportunities)
+
+<Screenshot src="/images/customer-management/tab-opportunities.jpg" alt="Opportunities tab" caption="Opportunities tab" />
+
+## Lifecycle
+
+**Customer Lifecycle Journey**: every stage the record has been through and its
+**Current Stage**. Transitions are recorded from the next stage change onwards.
+
+<Screenshot src="/images/customer-management/tab-lifecycle.jpg" alt="Lifecycle tab" caption="① Current Stage" />
+
+## Work Orders
+
+**Pending** and **Completed** work orders for the customer, with **Columns** and
+**Filters**, a **Search location…** box, and **New work order**. If any work
+order has been rescheduled, a warning shows how many times, with **View
+details**. → [Work Orders](/docs/operations/work-orders)
+
+<Screenshot src="/images/customer-management/tab-work-orders.jpg" alt="Work Orders tab" caption="① Pending / Completed ② New work order ③ Reschedule warning" />
+
+## Projects
+
+Projects for this customer under the **Pending**, **Active**, **Completed**, and
+**Rejected** tabs. → [Projects](/docs/customer-management/projects)
+
+## BOLs
+
+The customer's BOLs, with the same search and filters as the
+[BOLs page](/docs/operations/bols), plus **Send Bulk COR** (Certificate of
+Recycling).
+
+<Screenshot src="/images/customer-management/tab-bols.jpg" alt="BOLs tab" caption="① Send Bulk COR" />
+
+## Transactions
+
+Invoices and payments from QuickBooks: **Date**, **Type**, **Number**,
+**Amount**, **Sales Tax**, **Due Date**, **Balance Remaining**, **Terms**,
+**P.O**, **Rep**, **Status**, and **Ship Via**. Filter by **Date Range** and
+**Show**. Click **Refresh** to reload.
+
+<Screenshot src="/images/customer-management/tab-transactions.jpg" alt="Transactions tab" caption="① Date Range · Show ② Refresh" />
+
+## Line Items
+
+The billing breakdown per invoice: **Invoice #**, **BOL #**, **Invoice Date**,
+**Item Name**, **Item Desc**, **Quantity**, **Price**, and **Amount**.
+
+<Screenshot src="/images/customer-management/tab-line-items.jpg" alt="Line Items tab" caption="① Refresh" />
+
+## Sales Data
+
+A **QuickBooksOnline** summary (for example last and first invoice dates, last
+payment, average and lifetime sales amounts, terms, credit limit) and a
+monthly sales table by year.
+
+<Screenshot src="/images/customer-management/tab-sales-data.jpg" alt="Sales Data tab" caption="① QuickBooks summary ② Monthly sales" />
+
+## QuickBooks Linked Profile
+
+Compares the **Greenloop Customer Information** with the linked QuickBooks
+profile. Use **Link Customer Profile from QuickBooks** to search for a
+QuickBooks profile, or click **+ QuickBooks Profile**. Click **Unlink** to
+remove the link.
+
+<Screenshot src="/images/customer-management/tab-quickbooks.jpg" alt="QuickBooks Linked Profile tab" caption="① QuickBooks Profile ② Unlink" />

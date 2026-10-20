@@ -1,0 +1,41 @@
+---
+title: Lead Conversions By Sales Rep
+description: Track how many leads each sales rep converts, and how quickly.
+---
+
+<UIPath items={["Reports", "Lead Conversions By Sales Rep"]} />
+
+This report shows, for each sales rep, how many leads were created and
+converted.
+
+<Screenshot src="/images/reports/lead-conversions.jpg" alt="Lead Conversions By Sales Rep" caption="① Sales rep · Lead source · Converted Between ② Expand a rep" />
+
+## Filter the report
+
+Narrow the report by **Sales rep**, **Lead source**, and the **Converted
+Between** date range.
+
+## Columns
+
+| Column | Shows |
+| --- | --- |
+| **Sales Rep** | The rep (leads with no rep are grouped as *Unassigned*) |
+| **Leads Created** | Leads created for the rep |
+| **Converted** | Leads converted |
+| **New Prospect** | Converted leads counted as new prospects |
+| **Merged** | Converted leads counted as merged |
+| **Cohort Rate** | Share of created leads that were converted |
+| **Avg Days To Convert** | Average days from creation to conversion |
+
+## See the leads behind the numbers
+
+Click the arrow next to a rep to list their converted leads, with **Lead**,
+**Company** (links to the record), **Source**, **Created**, **Converted**,
+**Days**, **Mode** (for example *Created*), and **Promoted By**.
+
+<Screenshot src="/images/reports/lead-conversions-expanded.jpg" alt="Converted leads for a rep" caption="Leads converted by this rep" />
+
+<Callout type="info">
+  Leads are converted with **Promote to Prospect**. See
+  [Promoting Leads](/docs/lead-management/promoting-leads).
+</Callout>

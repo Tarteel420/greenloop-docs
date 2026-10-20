@@ -1,0 +1,70 @@
+---
+title: Leads Overview
+description: A mini dashboard of your leads. Open leads, new leads, unassigned leads, overdue follow-ups, conversions, and team workload.
+---
+
+<UIPath items={["Lead Management", "Overview"]} />
+
+The **Overview** page (titled **Team overview**) is a small dashboard for lead
+data only. It shows how many leads you have, who is working on them, and which
+ones need attention. The cards and links open the matching list.
+
+<Screenshot src="/images/lead-management/leads-overview.jpg" alt="Leads overview" caption="① Date range ② New lead ③ Summary cards" />
+
+## Choose the date range
+
+Use the date menu at the top right to set the period for the page. The default
+is **Last 30 days**. You can choose **Today**, **Last 7 days**, **Last 30 days**,
+**This quarter**, or **Custom**.
+
+<Screenshot src="/images/lead-management/leads-overview-date.jpg" alt="Date range options" caption="① Date range ② Range options" />
+
+## Summary cards
+
+| Card | What it shows |
+| --- | --- |
+| **Open leads** | Leads that haven't been converted to a prospect yet. The note shows how many were active in the period, out of all open leads. |
+| **New this period** | Leads created in the selected period, with the change compared with the previous period (for example *▼ 57% vs previous period*). |
+| **Unassigned** | Leads with no one assigned. Click **Assign now →** to open them. |
+| **Follow-ups overdue** | Follow-ups that are still to do after their scheduled date and time, with the age of the oldest one. |
+| **Converted** | Leads converted to a prospect in the period, with the conversion rate. |
+
+Click a card (or its **›** arrow) to open the matching list. For example,
+**Unassigned** opens the **Unassigned** tab of the [Leads list](/docs/lead-management/leads).
+
+## Pipeline by status and team workload
+
+<Screenshot src="/images/lead-management/leads-overview-pipeline.jpg" alt="Pipeline by status and Team workload" caption="① Pipeline by status ② View all leads ③ Team workload ④ Open activities" />
+
+- **Pipeline by status** shows open leads in stage order. The bar shows the
+  share of leads in each [lead status](/docs/system-resources/configuration/general#lead-statuses),
+  and the legend shows the count. Click **View all leads →** to open the list.
+- **Team workload** shows open leads and follow-ups for each person:
+  - **Leads owned**: **Open leads**, **Going cold**, and **Converted**.
+  - **Follow-ups assigned**: **Overdue** and **Due today**.
+
+  The **Unassigned** row counts leads with no owner. Click **Open activities →**
+  to go to the activities list.
+
+## Needs attention
+
+<Screenshot src="/images/lead-management/leads-overview-attention.jpg" alt="Needs attention" caption="① Going cold ② New & untouched ③ View all" />
+
+This section lists the leads you should act on:
+
+- **Going cold**: leads with no recent activity, for example *No activity in 65
+  days*. When a lead counts as going cold is set per lead status. See
+  [Lead Statuses](/docs/system-resources/configuration/general#lead-statuses).
+- **New & untouched**: new leads that nobody has contacted yet. When there are
+  none, it shows *Every new lead has been contacted.*
+- **Unassigned**: leads with no owner. Click **Assign** on a row to assign it.
+
+Click **View all** next to a group to see the full list.
+
+## Conversions by week
+
+<Screenshot src="/images/lead-management/leads-overview-conversions.jpg" alt="Unassigned and Conversions by week" caption="① Unassigned ② Assign ③ Conversions by week ④ View converted" />
+
+A bar chart of leads promoted to prospect over the **last 6 weeks**, with the
+total and the share of leads. The current week is marked *This week so far*.
+Click **View converted →** to open the **Converted** tab of the Leads list.

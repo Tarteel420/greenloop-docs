@@ -1,0 +1,6 @@
+{
+  "title": "Reports",
+  "icon": "ChartColumn",
+  "root": true,
+  "pages": ["index", "lead-conversions"]
+}

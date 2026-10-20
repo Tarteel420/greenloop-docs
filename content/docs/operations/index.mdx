@@ -1,0 +1,29 @@
+---
+title: Overview
+description: The pickup, transportation, and receiving workflow - work orders, BOLs, dispatch, and the fleet.
+---
+
+The Operations module manages the complete pickup, transportation, and receiving
+workflow. It is built from three connected parts.
+
+<Screenshot src="/images/getting-started/nav-operations-menu.jpg" alt="Operations menu" caption="① Operations ② Overview, Work orders, BOLs, Dispatch, Fleet" />
+
+<Cards>
+  <Card title="Work Orders" href="/docs/operations/work-orders" description="Define what to collect and from where." />
+  <Card title="BOLs" href="/docs/operations/bols" description="Track items from pickup to invoice, with time in stage and a Board view." />
+  <Card title="Dispatch" href="/docs/operations/routes" description="Plan routes on a Board or Calendar, schedule work orders, and the driver app." />
+  <Card title="Fleet" href="/docs/system-resources/trucks" description="Each truck's routes, load, and unavailability." />
+</Cards>
+
+## How the pieces fit together
+
+<Steps>
+  <Step>A [Work Order](/docs/operations/work-orders) defines the job.</Step>
+  <Step>Saving it generates a [BOL](/docs/operations/bols) and a driver pickup activity.</Step>
+  <Step>The work order is placed on a route in [Dispatch](/docs/operations/routes).</Step>
+  <Step>The driver completes the pickup via the [mobile app](/docs/operations/routes/driver-app), syncing updates back to the BOL.</Step>
+  <Step>The BOL is processed in the warehouse, signed off, and [invoiced](/docs/operations/bols/bol-documents).</Step>
+</Steps>
+
+Items a customer drops off without a work order are recorded with a
+[Walk-in BOL](/docs/operations/bols/walk-in-bols).

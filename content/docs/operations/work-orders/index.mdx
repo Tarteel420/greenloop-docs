@@ -1,0 +1,81 @@
+---
+title: Work Orders
+description: The Work Orders list, search, filters, and row actions.
+---
+
+The **Work orders** page contains all created work orders. A work order defines
+what items to collect from a customer, from where, and when.
+
+<UIPath items={["Operations", "Work orders"]} />
+
+<Screenshot src="/images/operations/work-orders/list.jpg" alt="Work orders list" caption="① New work order ② Pending / Completed ③ Columns / Filters ④ Route date and route" />
+
+Work orders are split into **Pending** and **Completed** tabs. Rows associated
+with **Guaranteed destruction** are highlighted (*The highlighted ones are
+associated with Guaranteed destruction.*).
+
+## What each work order shows
+
+| Column | Description |
+| --- | --- |
+| **Customer** | Customer name and sales rep |
+| **Location** | Pickup location and address |
+| **Contact** | Name, phone, and mobile |
+| **Pallets** | Estimated pallets |
+| **Route Date** | Scheduled date and route name, or **Unscheduled** |
+| **BOLs** | Linked Bill of Lading (click to open) |
+| **Type** | **Standard** or **Recurring** |
+
+Use **Columns** to show or hide columns and scroll right for more.
+
+## Search and filter
+
+Type in **Search location…** to find a work order by location. Click **Filters**
+to filter by **Customers**, **Project**, **Sales person**, **Facility**, **Start
+date**, **End date**, and **Scheduling Status**.
+
+<Screenshot src="/images/operations/work-orders/filters.jpg" alt="Work order filters" caption="Filters panel" />
+
+## Row actions
+
+Click **⋮** on a row for **View**, **Edit**, **Export**, and **Delete**.
+
+<Screenshot src="/images/operations/work-orders/row-menu.jpg" alt="Work order row menu" caption="View · Edit · Export · Delete" />
+
+## Work order details
+
+**View** opens **Work order details**, with **General details** (customer,
+project, sales rep, facility, date of route, guaranteed destruction, type, EPA
+\#, pallets, weight), **Addresses**, and the items, plus a **Notes** tab. The
+date of route shows the route and whether it was rescheduled (for example
+*Never rescheduled*).
+
+<Screenshot src="/images/operations/work-orders/detail.jpg" alt="Work order details" caption="① Copy & Create ② Edit ③ Route date and route" />
+
+- **Copy & Create** starts a new work order pre-filled from this one.
+- The **pencil** icon edits the work order.
+- **Reschedule** moves the work order to another date or route. See
+  [Schedule a work order](/docs/operations/routes#schedule-a-work-order).
+
+### Notes on recurring work orders
+
+A recurring work order is a **parent** with a **child** work order for each
+occurrence. Notes added on the parent are copied to every child in the series.
+
+- On a child, a note from the parent shows an **info icon**. Hovering over it
+  shows *From the parent of this series. To edit it, open the parent.*
+- Parent notes can't be edited or removed on a child. Open the parent to change
+  them.
+- You can still add a child's own notes with **New note**. These stay on that
+  occurrence only.
+
+<Screenshot src="/images/operations/work-orders/recurring-child-notes.jpg" alt="Notes on a child work order" caption="① Notes copied from the parent ② From the parent of this series" />
+
+## In this section
+
+<Cards>
+  <Card title="Creating a Work Order" href="/docs/operations/work-orders/creating-a-work-order" />
+  <Card title="Pickup Items" href="/docs/operations/work-orders/pickup-items" />
+  <Card title="Drop-Off Items" href="/docs/operations/work-orders/drop-off-items" />
+  <Card title="Work Order Flow" href="/docs/operations/work-orders/work-order-flow" />
+</Cards>

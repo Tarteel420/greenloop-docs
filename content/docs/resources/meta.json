@@ -1,0 +1,6 @@
+{
+  "title": "Resources",
+  "icon": "BookOpen",
+  "root": true,
+  "pages": ["index", "faq", "glossary"]
+}

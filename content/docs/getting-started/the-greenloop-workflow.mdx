@@ -1,0 +1,64 @@
+---
+title: The Greenloop Workflow
+description: How a job flows from the first lead all the way to an invoice.
+---
+
+This page shows the full path of a job through Greenloop. Each stage links to
+detailed instructions.
+
+## End-to-end flow
+
+<Steps>
+  <Step>
+    ### Lead → Prospect → Customer
+    A lead is created or imported, then promoted to a prospect. Prospects become
+    customers. You can also create a customer directly from **Customers → New customer**.
+    → [Leads](/docs/lead-management/leads) · [Prospects](/docs/customer-management/prospects) · [Creating Customers](/docs/customer-management/creating-customers)
+  </Step>
+  <Step>
+    ### Pricing agreed
+    A price tier is linked to the customer through a **price tier quote** or a
+    **project quote**. It may need internal approval and customer consent.
+    → [Pricing & Quotes](/docs/customer-management/pricing-and-quotes)
+  </Step>
+  <Step>
+    ### Work order created
+    The work order says what to collect, where, and when. Saving it creates a
+    pickup activity for the driver and a BOL.
+    → [Creating a Work Order](/docs/operations/work-orders/creating-a-work-order)
+  </Step>
+  <Step>
+    ### Route planned
+    The work order goes on a route with a truck and a driver.
+    → [Dispatch](/docs/operations/routes)
+  </Step>
+  <Step>
+    ### Driver pickup
+    The driver collects the items, prints QR labels, and records pickup and
+    drop-off details in the mobile app.
+    → [Driver Mobile Application](/docs/operations/routes/driver-app)
+  </Step>
+  <Step>
+    ### Warehouse processing
+    Items are received and, where the category requires it, go through triage
+    and sorting & counting. Walk-in BOLs cover materials a customer drops off
+    themselves. → [Processing Items Through the Warehouse](/docs/getting-started/warehouse-flow) · [Walk-in BOLs](/docs/operations/bols/walk-in-bols)
+  </Step>
+  <Step>
+    ### Sign-off and invoice
+    Once all steps are complete and the BOL is **Signed off**, click
+    **Generate invoice** to send it to QuickBooks.
+    → [Generating an Invoice](/docs/getting-started/generating-invoice)
+  </Step>
+</Steps>
+
+## BOL status progression
+
+A BOL's status tracks where the job is:
+
+**Waiting for pickup → Pickup completed → In processing → Ready for sign off → Signed off → Invoiced**
+
+<Callout type="info">
+  The processing path each material takes (Receiver → Triage → Sorting &
+  Counting) is set per category in the [Catalog](/docs/catalog/categories).
+</Callout>

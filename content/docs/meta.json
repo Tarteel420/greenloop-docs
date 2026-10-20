@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "index",
+    "getting-started",
+    "user-management",
+    "system-resources",
+    "catalog",
+    "lead-management",
+    "customer-management",
+    "pricing-billing",
+    "operations",
+    "reports",
+    "resources"
+  ]
+}

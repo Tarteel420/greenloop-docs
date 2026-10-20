@@ -1,0 +1,6 @@
+{
+  "title": "User Management",
+  "icon": "Users",
+  "root": true,
+  "pages": ["index", "creating-users", "user-profiles"]
+}

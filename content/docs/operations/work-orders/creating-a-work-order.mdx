@@ -1,0 +1,120 @@
+---
+title: Creating a Work Order
+description: Step-by-step - basic information, recurrence, addresses, items, and estimation.
+---
+
+<UIPath items={["Operations", "Work orders", "New work order"]} />
+
+<Callout type="info">
+  Prerequisites: an existing [customer](/docs/customer-management/creating-customers),
+  a [facility](/docs/system-resources/facilities), and the relevant
+  [catalog categories](/docs/catalog/categories).
+</Callout>
+
+You can also start a work order from a customer's
+[Work Orders tab](/docs/customer-management/customer-details#work-orders), from a
+project's **Work orders → Add**, or with **Copy & Create** on an existing work
+order.
+
+<Steps>
+  <Step>
+    ### Click New work order
+    On the **Work orders** page, click **+ New work order**. The **Create a new
+    work order** page opens.
+
+    <Screenshot src="/images/operations/work-orders/new-1-basic.jpg" alt="Create a new work order" caption="① Customers ② Facility ③ WorkOrder type ④ Notes" />
+  </Step>
+  <Step>
+    ### Choose the customer
+    Select the customer in **Customers** (required). The **EPA number**,
+    **Guaranteed destruction**, and addresses fill in from the customer. The
+    **Notes** icon shows a dot when the customer has notes. Click it to read them.
+
+    <Carousel images={[
+      {"src": "/images/operations/work-orders/new-2-customer.jpg", "alt": "Select the customer", "caption": "Select the customer"},
+      {"src": "/images/operations/work-orders/new-3-autofill.jpg", "alt": "Filled from the customer", "caption": "① EPA number ② Guaranteed destruction ③ Customer notes"},
+    ]} />
+  </Step>
+  <Step>
+    ### Complete the basic information
+    | Field | Notes |
+    | --- | --- |
+    | **Project** | Optional. Links the work order to a [project](/docs/customer-management/projects). |
+    | **Opportunity** | Optional. |
+    | **Facility** * | The facility for this job. |
+    | **EPA number** | Filled from the customer. |
+    | **Guaranteed destruction** | Filled from the customer, for example *Hard Drives Only*. |
+    | **WorkOrder type** * | **Standard** (one-off) or **Recurring**. |
+
+    <Screenshot src="/images/operations/work-orders/new-4-facility.jpg" alt="Choose the facility" caption="Choose the facility" />
+  </Step>
+  <Step>
+    ### Set the recurrence (Recurring only)
+    If **WorkOrder type** is **Recurring**, a **Set recurrence** panel appears:
+
+    - **Start date**
+    - **Repeat every**: a number and **Year**, **Month**, **Week**, or **Day**
+    - **On** (for example *September 1*) or **On the** (for example *First
+      Monday of January*)
+    - **End date**
+
+    A summary below confirms the pattern, for example *every September on the 1st*.
+
+    <Carousel images={[
+      {"src": "/images/operations/work-orders/new-recurring-1.jpg", "alt": "Recurring work order", "caption": "① WorkOrder type = Recurring ② Set recurrence"},
+      {"src": "/images/operations/work-orders/new-recurring-2.jpg", "alt": "Recurrence options", "caption": "① Repeat every ② On / On the ③ End date ④ Summary"},
+    ]} />
+  </Step>
+  <Step>
+    ### Check the addresses
+    The **Pickup address** is filled from the customer. Choose another in
+    **Pickup locations**, or click **Clear** to enter one yourself. For the
+    **Billing address**, tick **Keep same as pickup address** to copy it.
+
+    <Screenshot src="/images/operations/work-orders/new-5-addresses.jpg" alt="Addresses" caption="① Pickup locations ② Clear ③ Keep same as pickup address" />
+  </Step>
+  <Step>
+    ### Add the pickup details
+    Below the pickup contact, enter the **P.O no.**, the clearance height
+    (**Feet** / **Inches**), the **Starting hours** and **Ending hours**, and an
+    optional **Memo**.
+
+    <Screenshot src="/images/operations/work-orders/new-6-pickup-details.jpg" alt="Pickup details" caption="① P.O no. · Feet / Inches ② Starting / Ending hours ③ Pickup item" />
+  </Step>
+  <Step>
+    ### Add pickup items
+    Click **+ Pickup item**, choose the **Category** and **Sub type**, and set
+    the quantity. → [Pickup Items](/docs/operations/work-orders/pickup-items)
+  </Step>
+  <Step>
+    ### Add drop-off items (optional)
+    Click **+ Drop off item** for packaging or materials to deliver.
+    → [Drop-Off Items](/docs/operations/work-orders/drop-off-items)
+  </Step>
+  <Step>
+    ### Check the estimation
+    | Field | Notes |
+    | --- | --- |
+    | **Weight** | Estimated weight. |
+    | **Pallets** * | Calculated automatically. You can override it; click **Recalculate pallets** to recalculate. |
+    | **Date of route** * | The pickup date. |
+
+    <Screenshot src="/images/operations/work-orders/new-9-estimation.jpg" alt="Estimation" caption="① Weight · Pallets ② Recalculate pallets ③ Date of route ④ Route Suggestion ⑤ Save" />
+  </Step>
+  <Step>
+    ### Pick a route (optional)
+    Click **Route Suggestion** to see routes that fit, for the **Next 7 / 15 /
+    30 / 60 days**. Select a route, or skip this and assign a route later.
+
+    <Screenshot src="/images/operations/work-orders/new-10-route-suggestions.jpg" alt="Suggested routes" caption="① Next 7 / 15 / 30 / 60 days ② Auto-calculated pallets" />
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**.
+  </Step>
+</Steps>
+
+## What happens on save
+
+See [Work Order Flow](/docs/operations/work-orders/work-order-flow) for what
+Greenloop creates automatically when you save.

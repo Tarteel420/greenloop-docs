@@ -1,0 +1,56 @@
+---
+title: Email Templates
+description: Create reusable invoice email templates with default recipients and auto-filled variables.
+---
+
+<UIPath items={["Configuration", "Email Templates"]} />
+
+The **Email Template Manager** lets you create and manage reusable email
+templates. Templates are grouped by category (for example **Invoice**).
+
+<Screenshot src="/images/configuration/email-templates.jpg" alt="Email Template Manager" caption="① New Template ② Category filter and Default only ③ Templates grouped by category (click to expand)" />
+
+## Create a template
+
+<Steps>
+  <Step>
+    ### Click New Template
+    The **Create new template** window opens.
+  </Step>
+  <Step>
+    ### Name it and pick the category
+    Enter the **Template Name** and choose the **Category** (for example
+    **Invoice**).
+  </Step>
+  <Step>
+    ### Set default recipients and the subject
+    Add default **cc** and **bcc** emails. You can still change these each time
+    you send. Enter the **Subject**.
+  </Step>
+  <Step>
+    ### Write the body
+    Write the email in the editor. To insert a value that fills in
+    automatically when the email is sent, click the copy icon next to a
+    **Variable** and paste it into the subject or body.
+
+    <Screenshot src="/images/configuration/email-template-new.jpg" alt="Create new template" caption="① Name and category ② CC, BCC, Subject ③ Body editor ④ Variables" />
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**.
+  </Step>
+</Steps>
+
+## Invoice variables
+
+| Variable | |
+| --- | --- |
+| `{{customer_name}}` | `{{customer_primary_contact_name}}` |
+| `{{customer_account_payable_name}}` | `{{invoice_number}}` |
+| `{{invoice_amount}}` | `{{invoice_due_date}}` |
+| `{{bol_number}}` | `{{facility_name}}` |
+| `{{facility_address}}` | `{{facility_phoneNumber}}` |
+| `{{organization_name}}` | `{{organization_address}}` |
+| `{{organization_phoneNumber}}` | `{{organization_website}}` |
+
+Use **Default only** to show only the default templates.

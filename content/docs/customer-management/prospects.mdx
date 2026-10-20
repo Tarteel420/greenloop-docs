@@ -1,0 +1,56 @@
+---
+title: Prospects
+description: View prospect records and create a new prospect.
+---
+
+**Prospects** are records at the **Prospect** lifecycle stage: potential
+customers you are working to convert. They come from
+[promoted leads](/docs/lead-management/promoting-leads) or are created directly
+here.
+
+<UIPath items={["Customer Management", "Customers", "Prospects tab"]} />
+
+Prospects are on the **Prospects** tab of the
+[Customers](/docs/customer-management/customers-list) page. The search box
+searches customers and prospects together and shows the number of matches on
+each tab.
+
+<Screenshot src="/images/customer-management/customers-prospects-tab.jpg" alt="Prospects tab" caption="① Search ② Prospects tab ③ New prospect" />
+
+The **Prospects** list works like the [Customers list](/docs/customer-management/customers-list):
+**Search customers…**, **Columns**, **Advance Filters**, and **Filters**, with
+the **Shipping Address** and **Billing Address** of each record. Click a name to
+open its [details page](/docs/customer-management/customer-details).
+
+## Create a prospect
+
+<Steps>
+  <Step>
+    ### Click New prospect
+    On the **Prospects** tab, click **+ New prospect**. The **Create a new
+    commercial customer** form opens with **Status** set to **Prospect**.
+
+    <Screenshot src="/images/customer-management/prospect-form.jpg" alt="New prospect form" caption="① Status = Prospect ② Lead source ③ Business unit" />
+  </Step>
+  <Step>
+    ### Fill in the form
+    Complete the same sections as a commercial customer: **Primary information**,
+    **Addresses**, **Profile information**, and **Contacts**. Fields marked * are
+    required. See [Creating Customers](/docs/customer-management/creating-customers)
+    for each field.
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**.
+  </Step>
+</Steps>
+
+<Callout type="info">
+  In the form above, **Lead source** and **Business unit** are marked as
+  required. Required fields are set per status in
+  [Required/Optional Fields](/docs/system-resources/configuration/required-optional-fields).
+  When the prospect becomes a customer, change the **Status** (for example with
+  **Set customer status** in the list's bulk actions). Who can move a record
+  between stages is set in
+  [Lifecycle Transitions](/docs/system-resources/configuration/general#lifecycle-transitions).
+</Callout>

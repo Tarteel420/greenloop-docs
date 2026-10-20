@@ -1,0 +1,18 @@
+{
+  "title": "Customer Management",
+  "icon": "Building2",
+  "root": true,
+  "pages": [
+    "index",
+    "customers-list",
+    "creating-customers",
+    "customer-details",
+    "pricing-and-quotes",
+    "prospects",
+    "activities",
+    "projects",
+    "opportunities",
+    "approvals",
+    "merge-jobs"
+  ]
+}

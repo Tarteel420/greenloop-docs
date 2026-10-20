@@ -1,0 +1,46 @@
+---
+title: Price Adjustments
+description: Increase or decrease pricing by a percentage, with the option to revert.
+---
+
+The **Price adjustments** page increases or decreases pricing by a
+**percentage**.
+
+<UIPath items={["Pricing & Billing", "Price adjustments"]} />
+
+<Screenshot src="/images/pricing-billing/adjustments.jpg" alt="Price adjustments" caption="① Percentage ② Apply to all / Select custom items ③ Save ④ Default / Reverted ⑤ Revert" />
+
+## Apply an adjustment
+
+<Steps>
+  <Step>
+    ### Enter the percentage
+    Type the **Percentage** (required).
+  </Step>
+  <Step>
+    ### Choose what it applies to
+    - **Apply to all**: every item.
+    - **Select custom items**: choose a **Category** and its **Items**. Click
+      **Add category** to add more.
+
+    <Screenshot src="/images/pricing-billing/adjustments-custom.jpg" alt="Select custom items" caption="① Category · Items ② Add category" />
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**. The adjustment is added to the list.
+  </Step>
+</Steps>
+
+## Adjustment list
+
+| Column | Description |
+| --- | --- |
+| **Applied On** | Date |
+| **Applied By** | User |
+| **Applied To** | *All* or the selected items |
+| **Price Change(%)** | The percentage applied |
+
+<Callout type="info">
+  Click **Revert** on a row to revert an adjustment. Use the filter above the
+  list to show **Default** or **Reverted** adjustments.
+</Callout>

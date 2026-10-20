@@ -1,0 +1,67 @@
+---
+title: Categories
+description: High-level material groups. Create them and set how they're measured, their type, and their processing workflow.
+---
+
+Categories are high-level material groups, such as *Appliances* or *Batteries*.
+They control how materials move through the warehouse pipeline.
+
+<UIPath items={["Catalog", "Categories"]} />
+
+The page has two panels: **All categories** on the left and the **Sub
+categories** of the selected category on the right.
+
+<Screenshot src="/images/catalog/categories.jpg" alt="Categories page" caption="① New category ② New sub category ③ Selected category ④ Workflow badge ⑤ Packaging requirement badge" />
+
+Each category card shows **Operates by** (Quantity or Weight), **Type** (Pickup
+or Dropoff), and a workflow badge when the category goes past receiving
+(**S&C**, or **Triage → S&C**).
+
+## Create a category
+
+<Steps>
+  <Step>
+    ### Click + in All categories
+    Click the **+** button next to **All categories**. The **New category**
+    window opens.
+  </Step>
+  <Step>
+    ### Enter the details
+    - **Name** (required)
+    - **Operates by** (required): **Quantity** or **Weight**
+    - **Type** (required): tick **Pickup**, **Drop Off**, or both
+
+    <Screenshot src="/images/catalog/category-new.jpg" alt="New category" caption="① Name ② Operates by ③ Type ④ Workflow options ⑤ Save" />
+  </Step>
+  <Step>
+    ### Choose the workflow (optional)
+    *Select a workflow option, or leave it default.* Choose **Goes to 'Triage'**
+    and/or **Goes to 'Sorting & Counting'**. If you choose neither, the
+    **Receiver** does the entry (default).
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**. The category appears in **All categories**. Next, add its
+    [subcategories](/docs/catalog/subcategories).
+  </Step>
+</Steps>
+
+## Edit or delete a category
+
+Click **⋮** on the category card and choose **Edit** or **Delete**. Use the
+**Search…** box to find a category.
+
+## Category fields
+
+| Field | Options |
+| --- | --- |
+| Name | Category name |
+| Operates by | Quantity or Weight (how items are measured) |
+| Type | Pickup and/or Drop Off. In QA, the work order **Drop off items** category list shows the drop-off category *PACKAGING*. |
+| Workflow | Receiver (default), Triage, Sorting & Counting |
+
+<Callout type="info">
+  If no workflow stage is chosen, items default to the **Receiver**. Otherwise
+  they follow what you chose. See
+  [Processing Items Through the Warehouse](/docs/getting-started/warehouse-flow).
+</Callout>

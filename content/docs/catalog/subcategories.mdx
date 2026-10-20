@@ -1,0 +1,54 @@
+---
+title: Subcategories
+description: Detailed items within a category, used for billing and operational classification.
+---
+
+Subcategories are the detailed items within a [category](/docs/catalog/categories),
+for example *Refrigerator* and *Stove* under *Appliances*. Work orders and
+labels call them **Sub types**.
+
+<Callout type="warn">
+  **Billing is always based on subcategories, not main categories.** Every price
+  in a [price tier](/docs/pricing-billing) is set per subcategory.
+</Callout>
+
+<UIPath items={["Catalog", "Categories", "select a category"]} />
+
+## Create a subcategory
+
+<Steps>
+  <Step>
+    ### Select the category
+    On the Categories page, click the category in **All categories**. Its
+    subcategories load on the right.
+  </Step>
+  <Step>
+    ### Click + in Sub categories
+    Click the **+** button next to **Sub categories**. The **New sub category**
+    window opens.
+  </Step>
+  <Step>
+    ### Enter the details
+    - **Name** (required)
+    - **Doesn't require packaging**: tick it when the subcategory doesn't need packaging.
+    - **Requires EPA number?**: tick it if an EPA number is needed.
+    - **Packaging item(s)** (marked required): choose the packaging for this
+      subcategory from the items set up in [Packaging](/docs/catalog/packaging).
+
+    <Screenshot src="/images/catalog/subcategory-new.jpg" alt="New sub category" caption="① Name ② Doesn't require packaging ③ Requires EPA number? ④ Packaging item(s)" />
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**. The subcategory appears in the list with a **Doesn't require
+    packaging** badge or its **Packaging** (for example *Packaging: 3ft-Bin*).
+  </Step>
+</Steps>
+
+Use **⋮** on a subcategory row for its actions.
+
+## How packaging settings affect work orders
+
+For subcategories that need packaging, the work order's pickup item shows
+**Loose** and **Packaged** sections (for example *Alkaline Batteries* in QA).
+Subcategories marked **Doesn't require packaging** only take a quantity. The
+available **Item type** options depend on the category and subcategory. See [Pickup Items](/docs/operations/work-orders/pickup-items).

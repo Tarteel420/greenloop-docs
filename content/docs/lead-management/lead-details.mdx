@@ -1,0 +1,69 @@
+---
+title: Lead Details
+description: The full lead page. Next step, contact and company details, enrichment, notes, and the activity timeline.
+---
+
+<UIPath items={["Lead Management", "Leads", "lead", "Open full page"]} />
+
+Open the full lead page from the quick view (**Open full page**) or from the row
+menu (**⋮ → Open full page**).
+
+<Screenshot src="/images/lead-management/lead-detail.jpg" alt="Lead page" caption="① Status, assignee, source, location, and tags ② Call, Email, Edit, ⋮, Promote to prospect ③ Log activity ④ Next step ⑤ Activity timeline" />
+
+## Header
+
+Under the lead's name you see its **status** (change it from the dropdown), the
+**assignee**, the **source**, the **location**, and its tags.
+
+| Action | What it does |
+| --- | --- |
+| **Call** | Call the lead. Use the arrow to choose which number. |
+| **Email** | Email the lead. |
+| **Edit** | Edit the lead's details. |
+| **⋮** | **Enrich profile** and **Delete lead**. |
+| **Promote to prospect** | Converts the lead. See [Promoting Leads](/docs/lead-management/promoting-leads). |
+| **Log activity** | Record a call or meeting that already happened (see [below](#log-an-activity)). |
+
+## Page sections
+
+| Section | Contents |
+| --- | --- |
+| **Next step** | The next scheduled follow-up, or **Schedule follow-up**. |
+| **Contact** | **Email**, **Phone**, and **Mobile** (with copy buttons), plus **More contacts** when the lead has extra contacts. |
+| **Company** | **Company**, **Website**, **Industry**, **Employees**, **Category**, and **Address**. |
+| **Enrichment** | Click **Enrich** to fetch a professional profile for the lead. Once enriched, the profile is shown here and you can **Re-enrich**. |
+| **About** | **Created** (date and user), **Sales repeated**, and **Description**. |
+| **Notes** | Notes about the lead. Click **Add note**. |
+| **Activity** | A timeline of everything that happened to the lead. Filter it by **All**, **Notes**, **Calls & meetings**, **Follow-ups**, or **Changes** (for example status changes and field updates). |
+
+A converted lead shows a banner, *Converted to prospect on …*, with an **Open
+prospect** link, and its notes and timeline sit under **Activity** and
+**Lifecycle** tabs.
+
+## Log an activity
+
+Use **Log activity** to record a call or meeting after it happened.
+
+<Steps>
+  <Step>
+    ### Click Log activity
+    The **Log activity** panel opens with the **Lead** filled in.
+  </Step>
+  <Step>
+    ### Fill in the details
+    Choose the **Type** (**Call** or **Meeting**), add **Regarding** (up to 50
+    characters), the **Date**, **Start time**, **Duration**, and **Assigned to**.
+  </Step>
+  <Step>
+    ### Choose the outcome
+    Pick an **Outcome**: *Connected*, *No answer*, *Left voicemail*, *Meeting
+    booked*, *Not interested*, *Qualified*, or *Other*.
+  </Step>
+  <Step>
+    ### Save
+    Click **Log call** to save it.
+  </Step>
+</Steps>
+
+To plan a future call or meeting instead, use **Schedule follow-up**. See
+[Lead Activities](/docs/lead-management/lead-activities#create-a-follow-up).

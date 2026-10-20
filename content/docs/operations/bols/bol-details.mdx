@@ -1,0 +1,103 @@
+---
+title: Managing BOL Details
+description: The BOL page - BOL information, the processing steps, labels, and summary.
+---
+
+Click a BOL number to open the BOL page. It shows the job's information and its
+processing steps.
+
+<UIPath items={["Operations", "BOLs", "click a BOL No."]} />
+
+<Screenshot src="/images/operations/bols/detail-waiting.jpg" alt="BOL page" caption="① Status ② BOL Information ③ Linked workorder ④ Edit P.O / Memo" />
+
+## BOL Information
+
+| Field | Notes |
+| --- | --- |
+| **Customer** · **Date** · **Driver name** | |
+| **Check in** · **Check out** · **Duration** | Recorded by the driver. |
+| **Pickup address** | |
+| **P.O number** · **Memo** | Click the **pencil** to edit. |
+| **EPA Number** | |
+| **Guaranteed destruction** | Click the **pencil** to edit. A warning shows when the BOL is associated with guaranteed destruction. |
+
+- **View BOL Documents** opens the BOL's documents (available once there are
+  documents). → [Documents & Invoicing](/docs/operations/bols/bol-documents)
+- **Linked workorder** opens the work order.
+- The **Notes** tab holds notes on the BOL.
+
+## Processing steps
+
+The **Details** tab shows three steps. Completed steps are ticked.
+
+<Steps>
+  <Step>
+    ### Pickup/drop-off information
+    The **Pickup items** and **Drop off items** entered by the driver, and the
+    **Total generated labels for pallets**. Click **Continue** to go to the next
+    step.
+
+    <Screenshot src="/images/operations/bols/step-1-pickup.jpg" alt="Pickup/drop-off information" caption="① Pickup items ② Drop off items ③ Generated pallet labels ④ Continue" />
+
+    While the BOL is **Waiting for pickup**, you can add items with **+ Add
+    pickup item** and **+ Add drop-off item**, then click **Pickup/Dropoff done**.
+
+    <Screenshot src="/images/operations/bols/detail-waiting-items.jpg" alt="Add items" caption="① Add pickup item ② Add drop-off item ③ Pickup/Dropoff done" />
+  </Step>
+  <Step>
+    ### Labels Information
+    Every pallet label, with its **Category** and **Packaging**. Expand a label
+    to see its **Receiving** details (status, received by, date and time) and
+    item information (**Items**, **Weight (lb)**, **Quantity**). Search by
+    **label number** or filter by **Triage status**.
+
+    <Screenshot src="/images/operations/bols/step-2-labels.jpg" alt="Labels Information" caption="① Search by label number · Triage status ② New label ③ Label ④ Receiving details" />
+  </Step>
+  <Step>
+    ### Summary
+    All processed items with their recorded quantity or weight. This is what
+    feeds billing. Billing is based on [subcategories](/docs/catalog/subcategories).
+
+    <Screenshot src="/images/operations/bols/step-3-summary.jpg" alt="Summary" caption="Summary" />
+  </Step>
+</Steps>
+
+When every step is done, the page shows **All steps completed!** with **Signed
+off by** and **Date & time**. Click **Review steps** to look back through them.
+On a **Signed off** BOL, click **Generate invoice**.
+→ [Documents & Invoicing](/docs/operations/bols/bol-documents#generate-an-invoice)
+
+<Screenshot src="/images/operations/bols/steps-completed.jpg" alt="All steps completed" caption="① Steps ② Sign-off details ③ Review steps" />
+
+<Callout type="info">
+  Label details include information entered by **Receiver**, **Triage**, and
+  **Sort & Count** users, depending on the workflow configured for the
+  category. → [Processing Items Through the Warehouse](/docs/getting-started/warehouse-flow)
+</Callout>
+
+## Add a label
+
+<Steps>
+  <Step>
+    ### Click New label
+    In **Labels Information**, click **+ New label**.
+  </Step>
+  <Step>
+    ### Enter the label details
+    In **Add label**, choose the **Packaging** and **Category** (required), then
+    the **Sub type** and **Quantity** (required). Click **+ More sub types** to
+    add more.
+
+    <Screenshot src="/images/operations/bols/add-label.jpg" alt="Add label" caption="① Packaging · Category ② Sub type · Quantity ③ Preview label ④ Save" />
+  </Step>
+  <Step>
+    ### Preview and save
+    Click **Preview label** to check it, then **Save**.
+  </Step>
+</Steps>
+
+## Next
+
+<Cards>
+  <Card title="Documents & Invoicing" href="/docs/operations/bols/bol-documents" />
+</Cards>

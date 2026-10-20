@@ -1,0 +1,6 @@
+{
+  "title": "Lead Management",
+  "icon": "UserPlus",
+  "root": true,
+  "pages": ["index", "leads-overview", "leads", "saved-views", "importing-leads", "lead-details", "promoting-leads", "lead-activities"]
+}

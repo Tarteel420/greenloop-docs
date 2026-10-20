@@ -1,0 +1,91 @@
+---
+title: Activities
+description: Track customer interactions such as calls and meetings, and schedule follow-ups.
+---
+
+Activities track customer interactions and tasks (calls and meetings), so all
+communication is recorded and scheduled.
+
+<UIPath items={["Customer Management", "Activities"]} />
+
+<Screenshot src="/images/customer-management/activities-list.jpg" alt="Activities list" caption="① New activity ② To Do · Completed · Cancelled · All ③ Customers · Assigned user · Type · Search · Date range" />
+
+The list shows **Date & Time**, **Assigned To**, **Customer**, **Description**,
+**Regarding**, **Type**, **Priority**, and **Status**. You can change an
+activity's **Status** directly from the list.
+
+## Create an activity
+
+<Steps>
+  <Step>
+    ### Click New activity
+    On the **Activities** page, click **+ New activity**. You can also click
+    **New activity** on a customer's [Activities tab](/docs/customer-management/customer-details#activities).
+  </Step>
+  <Step>
+    ### Select the customer and type
+    Choose the **Customers** (required), then under **Select type** choose
+    **Call** or **Meeting**.
+
+    <Screenshot src="/images/customer-management/activity-form-call.jpg" alt="Create a new activity" caption="① Customers ② Call / Meeting ③ Scheduled for ④ Priority · Duration · Start / End date & time" />
+  </Step>
+  <Step>
+    ### Set who and when
+    | Field | Notes |
+    | --- | --- |
+    | **Scheduled for** | The user the activity is for. It can be created for any user. |
+    | **Regarding** | Subject of the activity (up to 50 characters). |
+    | **Priority** | For example *Low*. |
+    | **Duration** | For example *10 Min*. |
+    | **Start date & time** * · **End date & time** * | When it takes place. |
+  </Step>
+  <Step>
+    ### Meeting details (meetings only)
+    For a **Meeting**, choose **In Person** or **Online**. For an online meeting,
+    add the meeting **Link**. You can also link an **Opportunity** (optional).
+
+    <Carousel images={[
+      {"src": "/images/customer-management/activity-form-meeting.jpg", "alt": "Meeting mode", "caption": "Meeting mode: In Person / Online"},
+      {"src": "/images/customer-management/activity-form-customer.jpg", "alt": "Opportunity and Link", "caption": "① Opportunity (optional) ② Link (online meetings)"},
+    ]} />
+  </Step>
+  <Step>
+    ### Add the contact and description
+    Choose the contact in **Associated with** (required). The list shows the
+    contacts of the selected customer. Add a **Description**, then click **Save**.
+
+    <Screenshot src="/images/customer-management/activity-form-bottom.jpg" alt="Associated with and Save" caption="① Associated with ② Description ③ Save" />
+  </Step>
+</Steps>
+
+## View and manage an activity
+
+Use **⋮** on a row for **View**, **Edit**, **Delete**, and **Follow up
+activity**.
+
+<Screenshot src="/images/customer-management/activity-row-menu.jpg" alt="Activity row menu" caption="① View · Edit · Delete · Follow up activity ② Status" />
+
+The activity page shows the **Activity Information**, the **Contact
+Information**, **Recently completed work orders** for the customer, and a
+**Notes** tab.
+
+<Screenshot src="/images/customer-management/activity-view.jpg" alt="Activity page" caption="① Call ② Status ③ Edit / Delete ④ Follow up" />
+
+### Follow-ups
+
+Click **+ Follow up** on the activity page (or **Follow up activity** in the row
+menu) to schedule the next step, for example after a meeting.
+
+### Calling from Greenloop
+
+Greenloop integrates **Talkloop**, so you can call the customer from the
+activity. Click the **phone** icon's arrow to choose one of the customer's saved
+numbers or a **custom dial** number.
+
+<Screenshot src="/images/customer-management/activity-call-menu.jpg" alt="Call menu" caption="Saved numbers / custom dial" />
+
+<Callout type="info">
+  Activities are part of the CRM and are typically managed by the **Sales** role
+  and **Dispatchers**. Activities for leads are covered in
+  [Lead Activities](/docs/lead-management/lead-activities).
+</Callout>

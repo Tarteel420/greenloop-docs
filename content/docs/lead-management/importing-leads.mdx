@@ -1,0 +1,38 @@
+---
+title: Importing Leads
+description: Add many leads at once from an Excel or CSV file.
+---
+
+<UIPath items={["Lead Management", "Leads", "Import"]} />
+
+<Steps>
+  <Step>
+    ### Click Import
+    On the Leads page, click **Import**. The **Import Leads** window opens:
+    *Upload an Excel file to add multiple leads at once.*
+  </Step>
+  <Step>
+    ### Download the template (recommended)
+    Under **Need a template?**, click **Download Excel Template**. The template
+    has every available field. It includes required fields like name and email,
+    plus optional fields grouped as **Address**, **Professional**, **Contact**,
+    **Business**, **Additional**, and **Assignment** (source, status, assigned to,
+    tags).
+
+    <Screenshot src="/images/lead-management/lead-import.jpg" alt="Import Leads" caption="① Browse Files ② Download Excel Template" />
+  </Step>
+  <Step>
+    ### Fill in the file
+    Add one lead per row. **Tags** can hold several values in one cell. Separate
+    them with a comma, a semicolon, or a pipe.
+  </Step>
+  <Step>
+    ### Upload
+    Drag and drop the file onto the upload area, or click **Browse Files**.
+    Supported formats: **.xlsx, .xls, .csv**.
+  </Step>
+</Steps>
+
+<Callout type="info" title="Tip from the screen">
+  *Standard lead format files auto-map for you.*
+</Callout>

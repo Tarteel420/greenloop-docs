@@ -1,0 +1,4 @@
+{
+  "title": "Configuration",
+  "pages": ["index", "required-optional-fields", "general", "approval-rules", "bol-stage-limits", "email-templates"]
+}

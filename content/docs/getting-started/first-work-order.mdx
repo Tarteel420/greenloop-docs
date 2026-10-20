@@ -1,0 +1,56 @@
+---
+title: Creating Your First Work Order
+description: A quickstart for raising a work order, which also creates its BOL.
+---
+
+A **work order** tells Greenloop what to collect, from where, and when. Saving
+it schedules the driver's pickup activity and creates the paperwork (a BOL).
+
+<Callout type="info">
+  Before you start you need a [customer](/docs/getting-started/first-customer),
+  a [facility](/docs/system-resources/facilities), and the relevant
+  [catalog categories](/docs/catalog/categories).
+</Callout>
+
+<UIPath items={["Operations", "Work orders", "New work order"]} />
+
+<Steps>
+  <Step>
+    ### Start a new work order
+    Open **Operations → Work orders** and click **New work order**.
+  </Step>
+  <Step>
+    ### Choose the customer and facility
+    Select the **Customers** entry. The **EPA number** and **Guaranteed
+    destruction** fill in from the customer. Pick the **Facility** and the
+    **WorkOrder type** (Standard or Recurring).
+
+    <Screenshot src="/images/operations/work-orders/new-3-autofill.jpg" alt="Basic information filled from the customer" caption="① EPA number and ② Guaranteed destruction come from the customer ③ Notes" />
+  </Step>
+  <Step>
+    ### Check the addresses
+    The pickup and billing addresses fill in from the customer. You can change
+    them.
+  </Step>
+  <Step>
+    ### Add pickup items
+    Click **+ Pickup item**, choose a **Category** and **Sub type**, and set the
+    quantity. → [Pickup Items](/docs/operations/work-orders/pickup-items)
+  </Step>
+  <Step>
+    ### Set the estimation and route date, then save
+    Check **Pallets** (use **Recalculate pallets**), pick the **Date of route**,
+    optionally click **Route Suggestion**, then click **Save**.
+
+    <Screenshot src="/images/operations/work-orders/new-9-estimation.jpg" alt="Estimation and save" caption="① Weight · Pallets ② Recalculate pallets ③ Date of route ④ Route Suggestion ⑤ Save" />
+  </Step>
+</Steps>
+
+When you save, a **pickup activity** and a **BOL** are created automatically.
+→ [Work Order Flow](/docs/operations/work-orders/work-order-flow)
+
+## Next
+
+<Cards>
+  <Card title="Processing Items Through the Warehouse" href="/docs/getting-started/warehouse-flow" />
+</Cards>

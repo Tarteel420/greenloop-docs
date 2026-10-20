@@ -1,0 +1,31 @@
+---
+title: Work Order Flow
+description: What Greenloop creates automatically when a work order is saved.
+---
+
+When a work order is saved, Greenloop automatically sets up the downstream work.
+
+## On save
+
+<Steps>
+  <Step>
+    ### A pickup activity is created
+    A pickup activity is generated for the **driver**, who will see it in the
+    [mobile app](/docs/operations/routes/driver-app).
+  </Step>
+  <Step>
+    ### A BOL is generated
+    A **Bill of Lading** is created automatically and tracks the job through
+    pickup, receiving, and invoicing. → [BOLs](/docs/operations/bols)
+  </Step>
+</Steps>
+
+## Placing the work order on a route
+
+During creation you can choose a **route suggestion**, or assign the work order
+to a route afterward. → [Routes](/docs/operations/routes)
+
+<Callout type="info">
+  From here, the journey continues through the warehouse. See
+  [Processing Items Through the Warehouse](/docs/getting-started/warehouse-flow).
+</Callout>

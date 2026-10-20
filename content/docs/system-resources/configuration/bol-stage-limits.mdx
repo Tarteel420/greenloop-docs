@@ -1,0 +1,84 @@
+---
+title: BOL Stage Limits
+description: Set how long a BOL may stay in each stage before it shows as Due soon or Over limit.
+---
+
+<UIPath items={["Configuration", "BOL stage limits"]} />
+
+**BOL stage limits** let an org admin decide how long a BOL can stay in each
+stage before it is flagged. It works as an early-warning system: BOLs that are
+taking too long are highlighted on the [BOLs](/docs/operations/bols) page so
+someone can follow up. Each organization sets its own limits.
+
+The page explains: *A BOL shows Due soon once it enters the warning window and
+Over limit once it passes the limit. Time counts from the BOL's first entry into
+the stage, so moving back and forth doesn't reset it. Applies to every
+facility.*
+
+<Screenshot src="/images/configuration/bol-stage-limits.jpg" alt="BOL stage limits" caption="① How limits work ② Limit on ③ Time limit ④ Warn before ⑤ Invoiced has no limit" />
+
+## Set the limits
+
+<Steps>
+  <Step>
+    ### Open BOL stage limits
+    Go to **Configuration → BOL stage limits**. The **Stage time limits** table
+    lists every stage: **Waiting for pickup**, **Pickup completed**, **In
+    processing**, **Ready for sign off**, and **Signed off**. Under each stage
+    name, a summary shows the current setting, for example *2 hours · warn 1 hour
+    before*.
+  </Step>
+  <Step>
+    ### Turn the limit on or off
+    Use the **Limit on** toggle for each stage. Turn it off for stages you don't
+    want to track, for example **Waiting for pickup** if you schedule pickups far
+    ahead.
+  </Step>
+  <Step>
+    ### Enter the time limit
+    In **Time limit**, enter a number and choose **hours** or **days**. A BOL
+    that stays in the stage longer than this shows as **Over limit**.
+  </Step>
+  <Step>
+    ### Enter the warning time
+    In **Warn before**, enter how long before the limit the BOL should show as
+    **Due soon**, in **hours** or **days**. Leave it empty (**None**) for no
+    warning, which shows as *no warning*.
+  </Step>
+  <Step>
+    ### Save
+    Click **Save limits**, or **Cancel** to discard your changes.
+  </Step>
+</Steps>
+
+**Invoiced** is the final stage, so it has no limit (*final stage · no limit*).
+
+### Example
+
+| Stage | Time limit | Warn before | Why |
+| --- | --- | --- | --- |
+| Pickup completed | 9 hours | 4 hours | Receiving should start soon after the driver is back. |
+| In processing | 5 days | 2 days | Processing should finish within the week. |
+| Ready for sign off | 2 days | 1 day | The warehouse manager should sign off quickly. |
+| Signed off | 3 days | 1 day | Leaves time before invoicing. |
+
+*These values are the example from the sprint demo. Set your own to match your
+operations.*
+
+## Change history
+
+Below the table, **Change history** lists every change with who made it and
+when, for example *Ammar Khalid · Oct 15, 2026 12:05 am: In processing turned
+on, 2 hours, warn 1 hour*.
+
+<Screenshot src="/images/configuration/bol-stage-limits-history.jpg" alt="Save limits and Change history" caption="① Cancel · Save limits ② Change history" />
+
+## Where the limits show
+
+- The **Over stage limit** card and the **Time in stage** filter (**Over
+  limit**, **Due soon**, **On track**) on the [BOLs](/docs/operations/bols#time-in-stage) page.
+- The **In stage** column and badges such as **Over by 7d 19h** or **Due in 3h
+  57m**.
+- Red-bordered cards and *… over* counts in the Board view.
+- The limit line in the BOL quick view, for example *Limit for Waiting for
+  pickup: 2h · warn 1h before*.

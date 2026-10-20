@@ -1,0 +1,73 @@
+---
+title: General Price Tiers
+description: Reusable price tiers that can be linked to multiple customers.
+---
+
+A **General Price Tier** can be linked to multiple customers.
+
+<UIPath items={["Pricing & Billing", "Price tiers", "General"]} />
+
+<Screenshot src="/images/pricing-billing/general-list.jpg" alt="General price tiers" caption="① New price tier ② Search ③ Need approval on customer linking ④ Residential Customer tier" />
+
+The list shows each tier's **Name** and whether it has **Need approval on
+customer linking** (*Yes* / *No*). The residential tier is marked **Residential
+Customer**. Search with **Price tier name** and click a tier to open it.
+
+## Create a general price tier
+
+<Steps>
+  <Step>
+    ### Click New price tier
+    On the **Price tiers** page, click **+ New price tier**.
+
+    <Screenshot src="/images/pricing-billing/general-new.jpg" alt="New price tier" caption="① Name ② Need approval on customer linking ③ Residential price tier (disabled) ④ New branch ⑤ Save" />
+  </Step>
+  <Step>
+    ### Name the tier
+    Enter the **Name** (required). Tick **Need approval on customer linking** if
+    linking this tier to a customer should need approval.
+  </Step>
+  <Step>
+    ### Add a branch
+    Under **Branch**, click **+ New**. In **Add branch in price tier**, choose
+    the branch in **Select Branch**. Optionally choose a tier in **Copy prices
+    from** to start from its prices. Click **Add**.
+
+    <Screenshot src="/images/pricing-billing/add-branch.jpg" alt="Add branch in price tier" caption="① Select Branch ② Copy prices from ③ Add" />
+  </Step>
+  <Step>
+    ### Enter prices
+    Select the branch, then a **Category**. Enter a price for each **Sub type**.
+    Repeat for each category and branch.
+
+    <Screenshot src="/images/pricing-billing/price-grid.jpg" alt="Price grid" caption="① Branch ② Category ③ Sub type → price ④ Delete price tier" />
+  </Step>
+  <Step>
+    ### Save
+    Click **Save**.
+  </Step>
+</Steps>
+
+## Edit or delete a tier
+
+Click a tier in the list to open **Price tier detail**. Change the name,
+approval setting, or prices and save. Use **⋮** on a branch for its actions.
+Click **Price tier** (bin icon) at the top right to delete the tier.
+
+<Callout type="info">
+  If **Need approval on customer linking** is ticked, assigning the tier to a
+  customer requires approval. For example, if a sales representative links
+  such a tier to a customer, the request goes to the approver.
+  → [Approvals](/docs/customer-management/approvals)
+</Callout>
+
+## Branch-based pricing
+
+Pricing is set **per branch**, so each branch can have different prices. For
+each branch, define prices for the [subcategories](/docs/catalog/subcategories).
+
+## Residential price tier
+
+The **Residential price tier** checkbox is disabled, because only **one**
+residential price tier can exist and it can only be assigned to residential
+customers.

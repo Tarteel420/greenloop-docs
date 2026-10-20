@@ -1,0 +1,61 @@
+---
+title: Creating Users
+description: Invite a new user in Accesswise and assign their roles and facilities.
+---
+
+<Callout type="warn">
+  Only the **Org Admin** can create users.
+</Callout>
+
+<UIPath items={["Avatar", "Access Management", "Users", "Invite user"]} />
+
+<Steps>
+  <Step>
+    ### Open the Users tab
+    Open **Access Management** from the account menu and go to the **Users** tab.
+  </Step>
+  <Step>
+    ### Click Invite user
+    Click **Invite user** (top right of the list).
+
+    <Screenshot src="/images/user-management/users1.png" alt="Users tab with Invite user button" width={760} caption="Users tab → Invite user" />
+  </Step>
+  <Step>
+    ### Fill in the user details
+    Optionally click **Change Picture** to add a photo (square, at least
+    400×400px; JPG, PNG, or GIF up to 3MB). Then fill in the fields below.
+
+    <Screenshot src="/images/user-management/users2.png" alt="Invite user form" width={520} caption="Invite user: General Details, Application roles, and Add to facilities" />
+  </Step>
+  <Step>
+    ### Assign application roles
+    Under **Application roles**, choose the **Application** (for example
+    Greenloop) and the **Role**. Click **+ More Application Role** to add roles
+    in other applications.
+  </Step>
+  <Step>
+    ### Add facilities and invite
+    Under **Add to facilities**, choose the user's **Facility(s)**, then click
+    **Invite**. The user gets an invitation to activate their account (see
+    [Initial System Setup](/docs/getting-started/initial-setup)).
+  </Step>
+</Steps>
+
+## Fields
+
+| Field | Required | Notes |
+| --- | --- | --- |
+| First name | Yes | |
+| Last name | No | |
+| Designation | No | |
+| Email | Yes | The invitation goes to this address. |
+| Phone no. / Ext. | No | |
+| Mobile no. | No | |
+| Reporting manager | No | |
+| Application roles: Application · Role | Yes (Application) | See [user roles](/docs/getting-started/user-roles). |
+| Add to facilities: Facility(s) | No | Controls which data the user can reach. |
+
+<Callout type="info">
+  **Facility assignment controls what data and operations a user can access.**
+  Assign facilities carefully.
+</Callout>

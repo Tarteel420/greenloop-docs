@@ -1,0 +1,108 @@
+---
+title: Lead Activities
+description: Follow-ups with leads. Tabs, filters, the calendar view, and scheduling or completing follow-ups.
+---
+
+<UIPath items={["Lead Management", "Activities"]} />
+
+Lead activities are the calls and meetings (follow-ups) scheduled with leads.
+You can work with them in a **List** or a **Calendar**.
+
+<Screenshot src="/images/lead-management/lead-activities.jpg" alt="Lead activities list" caption="① List / Calendar ② New follow-up ③ Tabs ④ Search and filters" />
+
+## List view
+
+| Tab | Shows |
+| --- | --- |
+| **Overdue** | Follow-ups still to do after their scheduled date and time. Each row shows how late it is, for example *Overdue · 58d*. |
+| **Today** | Follow-ups scheduled for today. |
+| **Upcoming** | Follow-ups scheduled for later. |
+| **Done** | Completed follow-ups. |
+| **Cancelled** | Cancelled follow-ups. |
+| **All** | Every follow-up. This tab also has a **Status** filter. |
+
+- **Search subject or lead** and the **Lead**, **Assigned to**, **Type**,
+  **Priority**, and **Date** filters narrow the list.
+- The list shows **When** (date, time, type, priority), **Lead**,
+  **Regarding**, **Description**, and **Assigned to**.
+- Hover over a row and click **Complete** to mark it done, or use **⋮** for more
+  actions.
+- Once a filter is applied, **Save view** appears. Views work the same way as on
+  the Leads list. See [Saved Views](/docs/lead-management/saved-views).
+
+## Calendar view
+
+Click **Calendar** at the top right.
+
+<Screenshot src="/images/lead-management/lead-activities-calendar.jpg" alt="Calendar view" caption="① List / Calendar ② Call and Meeting toggles ③ Show completed ④ Week / Month and Today ⑤ Today and Overdue panel" />
+
+- Switch between **Week** and **Month**, move with the **‹ ›** arrows, and click
+  **Today** to come back to the current date.
+- Tick **Call** and **Meeting** to show or hide each type, and **Show
+  completed** to include completed follow-ups. The **Lead**, **Assigned to**,
+  **Type**, and **Priority** filters also apply.
+- The panel on the right lists **Today**'s follow-ups and all **Overdue** ones.
+  Click one to open it (see [below](#open-a-follow-up)).
+
+In **Month** view, click an entry on a day to open that day's follow-ups in the
+list, filtered by that date.
+
+<Carousel images={[
+  {"src": "/images/lead-management/lead-activities-calendar-month.jpg", "alt": "Month view", "caption": "① Month ② Entries on a day"},
+  {"src": "/images/lead-management/lead-activities-day-list.jpg", "alt": "Day opened in the list", "caption": "① Date filter for that day ② Date filter ③ Save view"},
+]} />
+
+## Open a follow-up
+
+Click a follow-up to open it in a panel on the right.
+
+<Screenshot src="/images/lead-management/lead-activity-drawer.jpg" alt="Follow-up panel" caption="① Status ② More actions ③ Add note ④ Complete · Reschedule · Follow up" />
+
+The panel shows the **Lead**, **Company**, **Regarding**, **Assigned to**,
+**Priority**, **Created by / on**, **Description**, and **Notes**.
+
+| Action | What it does |
+| --- | --- |
+| Status (for example **To do**) | Change the follow-up's status. |
+| **⋮** | **Edit** or **Cancel follow-up**. |
+| **Add note** | Add a note to the follow-up. |
+| **Complete** | Mark the follow-up as done. |
+| **Reschedule** | Move it to another date or time. |
+| **Follow up** | Schedule the next follow-up. |
+
+## Create a follow-up
+
+<Steps>
+  <Step>
+    ### Click New follow-up
+    On the Activities page, click **New follow-up**. You can also use
+    **Schedule follow-up** on a lead.
+
+    <Screenshot src="/images/lead-management/lead-activity-new-follow-up.jpg" alt="New follow-up" caption="① Lead ② Type ③ Date · Start time ④ Duration ⑤ Assigned to ⑥ Priority ⑦ Schedule" />
+  </Step>
+  <Step>
+    ### Choose the lead and type
+    Search for the **Lead** by name or email. Choose **Call** or **Meeting**. For
+    a meeting, also choose the **Meeting mode**: **In person** or **Online**.
+  </Step>
+  <Step>
+    ### Set the details
+    | Field | Notes |
+    | --- | --- |
+    | **Regarding** | Subject, up to 50 characters. |
+    | **Date** * · **Start time** * | When it takes place. |
+    | **Duration** * | **10 min**, **15 min**, **30 min**, **1 hr**, or **Custom**. The end time is shown below (*Ends at …*). |
+    | **Assigned to** * | Defaults to you. |
+    | **Priority** * | **Low**, **Medium**, or **High**. |
+    | **Description** | Optional notes. |
+  </Step>
+  <Step>
+    ### Schedule
+    Click **Schedule**.
+  </Step>
+</Steps>
+
+<Callout type="info">
+  Customer activities are covered in
+  [Customer Management → Activities](/docs/customer-management/activities).
+</Callout>

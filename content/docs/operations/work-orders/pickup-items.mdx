@@ -1,0 +1,69 @@
+---
+title: Pickup Items
+description: Define what items to collect, loose or already packaged.
+---
+
+The **Pickup items** section defines what needs to be **collected** from the
+customer.
+
+<Callout type="info">
+  Categories and sub types come from the [Catalog](/docs/catalog/categories).
+  The available item types depend on the category and sub type you pick.
+</Callout>
+
+## Add a pickup item
+
+<Steps>
+  <Step>
+    ### Choose the category
+    Click **+ Pickup item** and choose a **Category**.
+
+    <Carousel images={[
+      {"src": "/images/operations/work-orders/new-7a-category.jpg", "alt": "Pickup item category", "caption": "① Category ② Sub type ③ Pickup item (add another)"},
+      {"src": "/images/operations/work-orders/new-7b-category-list.jpg", "alt": "Category list", "caption": "Categories from the Catalog"},
+    ]} />
+  </Step>
+  <Step>
+    ### Choose the sub type and quantity
+    Choose the **Sub type** and set the quantity with − / +. Click **+ Sub type**
+    to add another sub type to the same category, or the bin icon to remove one.
+
+    <Screenshot src="/images/operations/work-orders/new-7c-subtype.jpg" alt="Sub type and quantity" caption="① Sub type ② Quantity ③ Another sub type ④ Remove" />
+  </Step>
+  <Step>
+    ### Say how the items are packed
+    For sub types that need packaging, **Loose** and **Packaged** panels appear
+    (sub types marked *Doesn't require packaging* in the
+    [catalog](/docs/catalog/subcategories) don't show them). See below.
+
+    <Screenshot src="/images/operations/work-orders/new-7d-loose-packaged.jpg" alt="Loose and Packaged" caption="① Loose ② Packaged" />
+  </Step>
+</Steps>
+
+## Loose
+
+The customer has items but **no packaging**, so packaging must be provided.
+
+1. In **Loose**, click **+ Packaging item**.
+2. Choose the **Item type**, for example **Gaylord**, **Pallet**, or **Plastic
+   Rolling Bin**. The available types depend on the sub type.
+3. Enter the quantity required.
+
+<Screenshot src="/images/operations/work-orders/new-7f-item-types.jpg" alt="Item types" caption="Item types for this sub type" />
+
+## Packaged
+
+The customer's items are **already stored in packaging**. In **Packaged**, click
+**+ Packaging item** and choose the packaging and quantity.
+
+Tick **Need replacement items** when replacement packaging must be provided
+because the customer's packaging will be taken during pickup. Then click **+
+Replacement item** to add it.
+
+<Screenshot src="/images/operations/work-orders/new-7e-replacement.jpg" alt="Need replacement items" caption="① Item type + quantity ② Need replacement items ③ Replacement item" />
+
+## Next
+
+<Cards>
+  <Card title="Drop-Off Items" href="/docs/operations/work-orders/drop-off-items" />
+</Cards>

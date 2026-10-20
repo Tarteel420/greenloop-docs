@@ -1,0 +1,65 @@
+---
+title: Merge Jobs
+description: Combine duplicate customer profiles into one.
+---
+
+Merge Jobs let you combine customer profiles, which is useful for duplicates.
+You choose a **source** profile and a **target** profile, then select what to
+merge from the source into the target.
+
+<UIPath items={["Customer Management", "Merge Jobs"]} />
+
+<Screenshot src="/images/customer-management/merge-jobs-list.jpg" alt="Merge Jobs" caption="① Merge Job ② Active · Completed · Failed ③ Refresh" />
+
+Merge jobs are listed under **Active**, **Completed**, and **Failed**, with
+**Source**, **Target**, **Status**, **Created By**, and **Created At**. Click
+**Refresh** to update the list.
+
+## Merge two customers
+
+<Steps>
+  <Step>
+    ### Click Merge Job
+    On the **Merge Jobs** page, click **+ Merge Job**. The **Merge Customer**
+    window opens.
+  </Step>
+  <Step>
+    ### Choose the source and target
+    In **Merge From (Source)**, select the duplicate profile. In **Merge To
+    (Target)**, select the profile to keep.
+
+    <Screenshot src="/images/customer-management/merge-modal.jpg" alt="Merge Customer" caption="① Merge From (Source) ② Merge To (Target) ③ Optional data to merge ④ Always transferred" />
+  </Step>
+  <Step>
+    ### Choose the data to merge
+    Under **Data to Merge**, tick what to move from the source to the target:
+
+    | Option | Contents |
+    | --- | --- |
+    | **Activities** | All activity, calls, emails, and meeting records |
+    | **Notes** | All notes from the customer view |
+    | **Contacts** | All contact persons with their details and roles |
+    | **Addresses** | Billing, shipping, and business addresses |
+
+    These are **always** transferred: **Work Orders**, **BOLs**, **Projects**,
+    **Sub Customers**, **Emails**, and **Attachments**.
+  </Step>
+  <Step>
+    ### Confirm
+    Review the **Action Confirmation**: *Source customer's profile will be
+    deleted after a successful merge operation.* The **Delete source customer
+    profile** box is ticked by default. Click **Confirm Merge**.
+
+    <Screenshot src="/images/customer-management/merge-confirm.jpg" alt="Action Confirmation" caption="① Action Confirmation ② Confirm Merge" />
+  </Step>
+  <Step>
+    ### Track the job
+    The job appears under **Active**, then moves to **Completed** or **Failed**.
+  </Step>
+</Steps>
+
+<Callout type="warn">
+  With **Delete source customer profile** ticked, the **source customer is
+  deleted** after the merge completes. Check that the source and target are
+  correct before you click **Confirm Merge**.
+</Callout>

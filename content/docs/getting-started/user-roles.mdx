@@ -1,0 +1,42 @@
+---
+title: Understanding User Roles
+description: The operational roles in Greenloop and what each one is responsible for.
+---
+
+Greenloop separates responsibilities across the recycling workflow using
+**roles**. Each role sees a tailored interface and only the data relevant to its
+work.
+
+## Roles at a glance
+
+| Role | Primary responsibility | Works in |
+| --- | --- | --- |
+| **Admin** | Full system access; manages configuration, users, and setup. Can hold multiple roles and oversee multiple facilities. | All modules |
+| **Sales** | Customer management only. Works across facilities and branches. | CRM module |
+| **Dispatcher** | Pre-operational planning and customer operations. | Web system |
+| **Driver** | Executes pickups and transports items. | Mobile app only |
+| **Receiver** | Unloads trucks, scans items one by one, and enters them. | Web system |
+| **Triage** | Processes incoming bulk materials (e.g. Gaylords) for sorting. | Web system |
+| **Sorting & Counting** | Separates and categorizes materials from triage. | Web system |
+| **Manager** | Oversees operational teams (drivers, receivers, triage, sorting). | Web system |
+
+## Dispatcher responsibilities
+
+Dispatchers handle planning in the warehouse and also run customer operations:
+
+- Calling customers
+- Creating work orders
+- Planning routes
+- Scheduling pickups
+- Assigning trucks and drivers
+
+## A note on the Driver role
+
+Drivers do **not** use the web system. They work entirely through a separate
+**Android mobile application**. See the
+[Driver Mobile Application](/docs/operations/routes/driver-app).
+
+<Callout type="warn">
+  Roles are assigned when a user is created. Only the **Org Admin** can create
+  users — not even an Admin can. See [Creating Users](/docs/user-management/creating-users).
+</Callout>

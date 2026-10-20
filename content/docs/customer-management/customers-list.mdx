@@ -1,0 +1,92 @@
+---
+title: Customers List
+description: Find customers with search and filters, open a quick view, and update several customers at once.
+---
+
+<UIPath items={["Customer Management", "Customers"]} />
+
+The **Customers** page lists every customer (and, on its **Prospects** tab,
+every prospect) with their shipping and billing
+addresses, **Tags**, **Status**, **Sales Rep**, **Hierarchy**, **Business
+Unit**, **Corporate**, **Type**, and **Date Created**. Scroll right to see all
+columns.
+
+<Screenshot src="/images/customer-management/customers-list.jpg" alt="Customers list" caption="① New customer ② Search ③ Columns · Advance Filters · Filters · View settings ④ Customers / Prospects tabs" />
+
+## Find a customer
+
+<Tabs items={["Search", "Filters", "Advance Filters", "View settings"]}>
+  <Tab value="Search">
+    Type in **Search customers…** to find a customer by name or address. The
+    search runs across **both** the **Customers** and **Prospects** tabs, so you
+    don't have to check two lists. See [Search customers and prospects together](#search-customers-and-prospects-together).
+  </Tab>
+  <Tab value="Filters">
+    Click **Filters** to open the filter panel: **Sales person**, **Type**,
+    **Business Unit**, **Lead Source**, **Customer Tags**, and **Price tier**.
+    Click the refresh icon to reset, or **✕** to close.
+
+    <Screenshot src="/images/customer-management/customers-filters.jpg" alt="Customer filters" caption="Filters panel" />
+  </Tab>
+  <Tab value="Advance Filters">
+    Click **Advance Filters** to build a rule: choose a **Column**, an
+    **Operator** (for example *Equals*), and a **Value**.
+
+    <Screenshot src="/images/customer-management/customers-advance-filters.jpg" alt="Advance Filters" caption="① Column · Operator · Value" />
+  </Tab>
+  <Tab value="View settings">
+    Click the **gear** icon to choose which records to show: **Active**,
+    **Inactive**, and/or **Archived**.
+  </Tab>
+</Tabs>
+
+## Search customers and prospects together
+
+The page has two tabs: **Customers** and **Prospects**. Each tab shows how many
+records it holds. When you type in the search box, both counts update to show
+how many matches each tab has. A **Search** chip appears under the tabs, with
+**Clear** to remove it.
+
+<Screenshot src="/images/customer-management/customers-search-tabs.jpg" alt="Search counts on the Customers and Prospects tabs" caption="① Search ② Customers / Prospects tabs with match counts ③ Search chip · Clear" />
+
+If there are no matching customers but there are matching prospects, open the
+**Prospects** tab to see them. The search stays applied when you switch tabs.
+
+<Screenshot src="/images/customer-management/customers-prospects-tab.jpg" alt="Matches on the Prospects tab" caption="① Same search ② Prospects tab with 3 matches ③ New prospect" />
+
+<Callout type="info">
+  Prospects no longer have their own menu item. Open them from the **Prospects**
+  tab on this page. See [Prospects](/docs/customer-management/prospects).
+  In the sprint demo, the team said that when one tab has no matches the page
+  switches to the tab that does. In our QA check the page stayed on the
+  **Customers** tab (showing 0) and we opened **Prospects** ourselves.
+</Callout>
+
+## Quick view
+
+Hover over a customer's name to see a quick view with the **Status**,
+addresses, contacts, and profile details (payment terms, payment method, sales
+reps, branches). Click **View Details** to open the full
+[customer page](/docs/customer-management/customer-details).
+
+<Screenshot src="/images/customer-management/customer-quick-view.jpg" alt="Customer quick view" caption="① View Details ② Hover over the customer name" />
+
+<Callout type="info">
+  Clicking a customer name opens the customer page in a **new tab**.
+</Callout>
+
+## Bulk actions
+
+<Steps>
+  <Step>
+    ### Select customers
+    Tick the checkbox next to one or more customers. A bar shows how many are
+    selected, with **Select all … customers** to select every customer.
+  </Step>
+  <Step>
+    ### Choose an action
+    Click an icon on the right of the bar:
+    - **Set customer sales rep**
+    - **Set customer status**
+  </Step>
+</Steps>

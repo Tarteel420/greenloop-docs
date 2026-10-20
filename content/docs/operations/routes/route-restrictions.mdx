@@ -1,0 +1,48 @@
+---
+title: Route Restrictions
+description: Turn capacity and clearance height restrictions on or off for a route.
+---
+
+Restrictions help prevent assigning a truck to a stop it cannot serve. They can
+be set for:
+
+- **Capacity**
+- **Clearance Height**
+
+## Set a route's restrictions
+
+<Steps>
+  <Step>
+    ### Open the restrictions
+    On the **Dispatch** page, open the route's **⋮** menu: in the
+    [Board view](/docs/operations/routes#board-view) choose **Route →
+    Restrictions**; in the [Classic view](/docs/operations/routes#classic-view)
+    choose **Route restriction**.
+  </Step>
+  <Step>
+    ### Choose the restrictions
+    The **Route Restrictions** window lists the *Active restrictions on route
+    "…"*. Tick or untick **Capacity** and **Clearance Height**, and add a
+    **Note** (for example, why a restriction is turned off).
+
+    <Screenshot src="/images/operations/routes/restrictions.jpg" alt="Route Restrictions" caption="① Capacity · Clearance Height ② Note ③ Ok" />
+  </Step>
+  <Step>
+    ### Save
+    Click **Ok**.
+  </Step>
+</Steps>
+
+## How restrictions behave
+
+> Example: if a truck has a height restriction, the system alerts you when
+> adding a work order whose location cannot accommodate that truck.
+
+<Callout type="info">
+  The warning can be **bypassed** when operationally required, for example by
+  parking the truck outside and moving the materials by hand.
+</Callout>
+
+Truck dimensions (height, capacity, weight capacity) are set in
+[Fleet](/docs/system-resources/trucks). A stop's clearance height comes from
+the work order (**Feet** / **Inches**).

@@ -1,0 +1,13 @@
+{
+  "title": "Pricing & Billing",
+  "icon": "Tags",
+  "root": true,
+  "pages": [
+    "index",
+    "general-price-tiers",
+    "customer-specific-price-tiers",
+    "price-adjustments",
+    "surcharges",
+    "basic-template"
+  ]
+}

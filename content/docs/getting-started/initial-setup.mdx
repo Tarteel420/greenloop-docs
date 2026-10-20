@@ -1,0 +1,102 @@
+---
+title: Initial System Setup
+description: The one-time setup the Org Admin completes before operations begin.
+---
+
+When your organization first gets Greenloop, the system is **blank** except for
+a single **Org Admin** account. The org admin does a one-time setup before any
+operations can run.
+
+## Setup at a glance
+
+| Order | What | Where |
+| --- | --- | --- |
+| 1 | Activate your account and change the password | Invitation email → Accesswise |
+| 2 | Sign in to Greenloop | Greenloop sign-in page |
+| 3 | Create users, branches, and facilities | **Access Management** (Accesswise) |
+| 4 | Build the catalog | **Catalog** menu |
+| 5 | Add trucks | **Operations → Fleet** |
+| 6 | Configure lists, required fields, approvals, and email templates | **Configuration** menu |
+| 7 | Set up pricing | **Pricing & Billing** menu |
+
+## Step by step
+
+<Steps>
+  <Step>
+    ### Activate your account
+    Open the invitation link. Accesswise asks you to finish the required actions
+    (verify your email and update your password).
+
+    1. Click **Click here to proceed**.
+    2. Enter a **New Password** and **Confirm password**, then click **Submit**.
+    3. You'll see **Your account has been updated.**
+
+    <Carousel
+      images={[
+        { src: "/images/getting-started/1.png", alt: "Perform the following actions", caption: "1 · Click “Click here to proceed”." },
+        { src: "/images/getting-started/2.png", alt: "Update password", caption: "2 · Set and confirm your new password, then click Submit." },
+        { src: "/images/getting-started/3.png", alt: "Account updated", caption: "3 · Your account has been updated." },
+      ]}
+    />
+  </Step>
+
+  <Step>
+    ### Sign in
+    Open the [Greenloop sign-in page](https://qa-erp.btosystems.com/auth/amplify/sign-in?returnTo=%2Fdashboard),
+    enter the email the invitation was sent to, click **Continue**, then enter
+    your password. The **Dashboard** opens.
+
+    <Carousel
+      images={[
+        { src: "/images/getting-started/0.png", alt: "Sign in", caption: "Enter your email and click Continue." },
+        { src: "/images/getting-started/4.png", alt: "Dashboard after sign-in", caption: "After signing in you land on the Dashboard. Your avatar (top right) opens the account menu." },
+        { src: "/images/getting-started/5.png", alt: "Access Management", caption: "Account menu → Access Management opens Accesswise, where users are managed." },
+      ]}
+    />
+  </Step>
+
+  <Step>
+    ### Create users, branches, and facilities
+    Click your avatar (top right) and choose **Access Management** to open
+    **Accesswise**. Invite each person, give them a Greenloop role, and assign
+    their facilities. Only the **Org Admin** can create users.
+    → [User Management](/docs/user-management) · [Facilities](/docs/system-resources/facilities)
+  </Step>
+
+  <Step>
+    ### Build the Catalog
+    Define the materials and items your facility handles: categories,
+    subcategories, assets, packaging, and essentials.
+    → [Catalog](/docs/catalog)
+  </Step>
+
+  <Step>
+    ### Add trucks
+    Add each truck with its facility, dimensions, capacity, and any
+    unavailability dates. → [Fleet](/docs/system-resources/trucks)
+  </Step>
+
+  <Step>
+    ### Configure the system
+    Set up business units, lead sources, statuses, tags, lifecycle transitions,
+    required fields, approval rules, and email templates.
+    → [Configuration](/docs/system-resources/configuration)
+  </Step>
+
+  <Step>
+    ### Set up pricing
+    Create price tiers, surcharges, and the basic pricing template.
+    → [Pricing & Billing](/docs/pricing-billing)
+  </Step>
+</Steps>
+
+<Callout type="warn">
+  Only the **Org Admin** can create users. The rest of the setup (Catalog,
+  System & Resources, Configuration, Pricing) can be done by the org admin or an
+  Admin.
+</Callout>
+
+## What's next
+
+Learn the main menu in [Navigating Greenloop](/docs/getting-started/navigating-greenloop),
+then see how a job flows in [The Greenloop Workflow](/docs/getting-started/the-greenloop-workflow).

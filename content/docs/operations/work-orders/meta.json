@@ -1,0 +1,10 @@
+{
+  "title": "Work Orders",
+  "pages": [
+    "index",
+    "creating-a-work-order",
+    "pickup-items",
+    "drop-off-items",
+    "work-order-flow"
+  ]
+}

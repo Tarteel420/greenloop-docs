@@ -1,0 +1,199 @@
+---
+title: Opportunities
+description: Track potential deals in a list, a sales-rep pipeline, and a closed view. Group, filter, edit, and close opportunities.
+---
+
+An **opportunity** is a potential deal with a customer. It records the projected
+value, the stage, and the expected close date so sales can track the pipeline.
+
+<UIPath items={["Customer Management", "Opportunities"]} />
+
+The page has three views: **List**, **Pipeline**, and **Closed**.
+
+<Screenshot src="/images/customer-management/opportunities-list.jpg" alt="Opportunities" caption="① List / Pipeline / Closed ② Date ③ Reset ④ Stage cards ⑤ New opportunity" />
+
+## Date filter and stage cards
+
+- **Date**: choose the **Date field** (**Expected close** or **Created**) and a
+  **Range** (**This month**, **Next 30 days**, **This quarter**, **Next
+  quarter**, **This year**, **All time**, or **Custom range…**). Click **Reset**
+  to go back to the default.
+- **Stage cards**: one card per open stage (**Open**, **In Discussion**,
+  **Issued Estimates**, **Purchasing**) plus **All stages**. Each card shows the
+  **weighted** total in large type, the stage weight (for example *80% weight*),
+  the projected total (**proj**), and the number of customers.
+
+<Callout type="info" title="Weighted vs projected">
+  The **projected** amount is the value entered on the opportunity. The
+  **weighted** amount is the projected amount × the stage probability. For
+  example, $5,000.50 in **Purchasing** (80%) is $4,000.40 weighted. Stage
+  probabilities are set in
+  [Opportunity Statuses](/docs/system-resources/configuration/general#opportunity-statuses).
+</Callout>
+
+## List view
+
+<Screenshot src="/images/customer-management/opportunities-table.jpg" alt="Opportunities list" caption="① Search ② Stage ③ All / Overdue / Stale ④ Group by ⑤ Overdue badge ⑥ Expand row" />
+
+| Tool | Use |
+| --- | --- |
+| **Search ID, title, customer** | Find an opportunity. |
+| Stage menu (**All stages**) | Show one stage only. |
+| **All** / **Overdue** / **Stale** | **Overdue** shows open opportunities past their expected close date. **Stale** shows opportunities flagged as stale. |
+| **Group by** | **None**, **Customer**, **Sales rep**, or **Stage**. |
+
+The list shows the **Opportunity** (number, title, and customer), **Sales rep**,
+**Stage**, **Expected close** (with an **Overdue** badge when late), **Last
+activity**, **Projected**, and **Weighted**.
+
+### Group the list
+
+Choose a **Group by** option to collapse the list into groups. Each group row
+shows the count (for example *1 opportunity · 1 overdue*) and the projected and
+weighted totals. Click **›** to expand a group.
+
+<Screenshot src="/images/customer-management/opportunities-grouped.jpg" alt="Grouped by customer" caption="① Group by Customer ② Expanded group ③ Collapsed group" />
+
+### Expand a row
+
+Click **+** on a row to see **Reports to**, **Probability**, and **Days in
+stage**, and these actions:
+
+<Screenshot src="/images/customer-management/opportunity-row-expanded.jpg" alt="Expanded opportunity" caption="① Details ② Edit · Mark as won · Mark as lost · Flag as stale ③ Open full record" />
+
+| Action | What it does |
+| --- | --- |
+| **Edit** | Opens the **Edit opportunity** panel (see [below](#edit-an-opportunity)). |
+| **Mark as won** | Moves the opportunity to **Closed Won**. |
+| **Mark as lost** | Moves the opportunity to **Closed Lost**. |
+| **Flag as stale** | Flags it so a manager can review it. Flagged opportunities appear under **Stale**. |
+| **Open full record** | Opens the opportunity's own page. |
+
+### Edit an opportunity
+
+**Edit** opens a panel on the right, so you don't leave the list. *Changes show
+up in the pipeline as soon as you save.*
+
+<Screenshot src="/images/customer-management/opportunity-edit-drawer.jpg" alt="Edit opportunity" caption="① Stage ② Projected amount · Expected close ③ Weighted value ④ Save changes" />
+
+You can change the **Title**, **Customer**, **Stage**, **Projected amount**,
+**Expected close**, **Lead source**, and **Description**. The **Weighted value**
+updates from the projected amount and the stage weight. Click **Save changes**.
+
+### Closing checks
+
+Greenloop checks the opportunity before it lets you close it. For example, an
+opportunity can't be marked as lost while work is linked to it. The message
+explains why and how many BOLs or projects are linked.
+
+<Screenshot src="/images/customer-management/opportunity-lost-blocked.jpg" alt="Can't be marked as lost" caption="① Reason the opportunity can't be closed" />
+
+<Callout type="warn">
+  To close an opportunity that is no longer being pursued, first unlink the BOL
+  or project from it.
+</Callout>
+
+## Pipeline view
+
+The **Pipeline** view shows open opportunities per sales rep and stage.
+
+<Screenshot src="/images/customer-management/opportunities-pipeline.jpg" alt="Pipeline view" caption="① Lead with: Weighted / Projected ② Stage columns" />
+
+- **Lead with**: show the amounts as **Weighted** (default) or **Projected**.
+- Each row is a sales rep. Each cell shows the amount and the number of
+  customers (**cust**) for that stage. **Total** adds up all stages.
+- Managers appear with a **Team** badge (for example *Team · 3*). The table ends
+  with **No sales rep** and a **Grand total**.
+
+<Screenshot src="/images/customer-management/opportunities-pipeline-rows.jpg" alt="Pipeline rows" caption="① A rep's amount for one stage ② Team rows" />
+
+### See a team
+
+Click a team row to drill into that manager's team. You see the manager's **own
+deals**, each team member, and **Total – [name]'s team**. The stage cards
+update to that team. Click **Everyone** or **← Back to Everyone's team** to go
+back.
+
+<Carousel images={[
+  {"src": "/images/customer-management/opportunities-pipeline-team.jpg", "alt": "Team breadcrumb", "caption": "① Everyone / team breadcrumb ② Back to Everyone's team"},
+  {"src": "/images/customer-management/opportunities-pipeline-team-rows.jpg", "alt": "Team rows", "caption": "① Manager's own deals ② Team total"},
+]} />
+
+<Callout type="info">
+  Each customer is counted once in a total, even if more than one rep works with
+  them. That's why the customer count can be lower than the rows above added
+  together.
+</Callout>
+
+### See what's behind a number
+
+Click an amount in the table. A panel opens for that rep and stage.
+
+<Screenshot src="/images/customer-management/opportunities-pipeline-drawer.jpg" alt="Pipeline cell panel" caption="① Weighted, projected, opportunities, customers ② Opportunities / Customers tabs ③ All / Overdue / Stale ④ Sort ⑤ Open in list view" />
+
+- The top shows the **Weighted** and **Projected** totals and the number of
+  **Opportunities** and **Customers**.
+- **Opportunities** lists each deal with its customer, location, expected close,
+  days in stage, and last activity.
+- **Customers** lists each customer once, with its totals. Click **›** to expand.
+- Filter with **All**, **Overdue**, and **Stale**, and sort by **Expected close
+  (soonest)**, **Projected (highest)**, **Days in stage (longest)**, or **Last
+  activity (oldest)**.
+- Use **⋮** on an opportunity for **Open opportunity**, **Edit opportunity**,
+  **Mark as won**, **Mark as lost**, and **Flag as stale**.
+- Click **Open in list view** to see the same opportunities in the List view.
+
+<Carousel images={[
+  {"src": "/images/customer-management/opportunities-pipeline-customers.jpg", "alt": "Customers tab", "caption": "① Customers tab ② Each customer is listed once"},
+  {"src": "/images/customer-management/opportunities-pipeline-menu.jpg", "alt": "Opportunity actions", "caption": "① Open, Edit, Mark as won, Mark as lost, Flag as stale"},
+]} />
+
+## Closed view
+
+The **Closed** view lists **Closed Won** and **Closed Lost** opportunities.
+
+<Screenshot src="/images/customer-management/opportunities-closed.jpg" alt="Closed view" caption="① Closed ② Closed Won / Closed Lost totals ③ All / Won / Lost" />
+
+The two cards show the count and total for each outcome. Filter with **All**,
+**Won**, or **Lost**, or search by ID, title, or customer. The list shows the
+**Opportunity**, **Sales rep**, **Outcome**, **Closed** date, and **Amount**.
+
+## Create an opportunity
+
+<Steps>
+  <Step>
+    ### Click New opportunity
+    On the **Opportunities** page, click **+ New opportunity**. The **New
+    opportunity** panel opens on the right: *It shows up in the pipeline as
+    soon as you create it.*
+
+    <Screenshot src="/images/customer-management/opportunity-form.jpg" alt="New opportunity" caption="① Title ② Customer ③ Sales rep · Stage ④ Projected amount · Expected close ⑤ Lead source ⑥ Create opportunity" />
+  </Step>
+  <Step>
+    ### Fill in the details
+    | Field | Notes |
+    | --- | --- |
+    | **Title** * | A short name for the deal. |
+    | **Customer** * | The customer the deal is for. |
+    | **Sales rep** * | Pick a customer first; then choose the rep. |
+    | **Stage** * | Starts at **Open** (10%). |
+    | **Projected amount** * | The full value of the deal. |
+    | **Expected close** * | When you expect to close the deal. |
+    | **Lead source** * | Where the deal came from. |
+    | **Description** | Optional. |
+
+    The **Weighted value** (projected × stage weight) is calculated for you.
+  </Step>
+  <Step>
+    ### Create
+    Click **Create opportunity**.
+  </Step>
+</Steps>
+
+<Callout type="info">
+  Opportunity statuses are configured in
+  [General → Opportunity Statuses](/docs/system-resources/configuration/general#opportunity-statuses).
+  A [project quote](/docs/customer-management/pricing-and-quotes#create-a-project-quote)
+  can be linked to an opportunity. A customer's own opportunities are also on
+  its [Opportunities tab](/docs/customer-management/customer-details#opportunities).
+</Callout>

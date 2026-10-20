@@ -1,0 +1,79 @@
+---
+title: Key Concepts
+description: Multitenancy, branches and facilities, role-based access, the customer lifecycle, and the material workflow.
+---
+
+Everything in Greenloop builds on a few core ideas. Learn these first and the
+rest of the guide is easy to follow.
+
+## Multitenancy
+
+Greenloop is **multitenant**: each organization uses it as its own isolated
+system. A new organization starts completely blank, with one user: the
+**Org Admin**. The org admin sets everything up and creates all other users.
+
+<Callout type="info">
+  The first time the org admin signs in, they must change their password before
+  they can continue.
+</Callout>
+
+## Branches and facilities
+
+- A **Branch** is a regional grouping, for example a U.S. state.
+- A **Facility** is a physical warehouse. Every facility belongs to a branch.
+
+> Example: an organization with two warehouses in Minnesota has *Minnesota* as
+> the branch and the two warehouses as *facilities* under it.
+
+<Callout type="info" title="Naming in the app">
+  Many Greenloop screens say **Branch** or **Branches**, for example on the
+  customer profile, price tiers, and project scope. Work orders, BOLs, trucks,
+  and routes say **Facility**. See [Facilities](/docs/system-resources/facilities).
+</Callout>
+
+## Role-based access
+
+Each user type gets a different interface and can only do the actions tied to
+their job. **Facility assignment** further limits which data and operations a
+user can reach. See [Understanding User Roles](/docs/getting-started/user-roles).
+
+## The customer lifecycle
+
+Every record in the CRM has a lifecycle **Status**. A record moves through these
+stages:
+
+<Steps>
+  <Step>**Lead**: a potential contact, managed in [Lead Management](/docs/lead-management).</Step>
+  <Step>**Prospect**: a promoted lead or a record created as a prospect. See [Prospects](/docs/customer-management/prospects).</Step>
+  <Step>**Customer**: an active customer. See [Customers](/docs/customer-management/customers-list).</Step>
+  <Step>**Inactive / Archived**: a customer that is no longer active.</Step>
+</Steps>
+
+Who can move a record between stages is set in
+[Lifecycle Transitions](/docs/system-resources/configuration/general#lifecycle-transitions).
+Each customer's history is on its [Lifecycle tab](/docs/customer-management/customer-details#lifecycle).
+
+<Callout type="info" title="Status vs Tags">
+  **Status** is the lifecycle stage. **Tags** are separate labels your
+  organization sets up (for example *COD Customer*). See
+  [Tags](/docs/system-resources/configuration/general#tags).
+</Callout>
+
+## The material workflow
+
+Each material **category** has a **processing workflow** that decides where
+received items go:
+
+<Steps>
+  <Step>**Receiver**: the default. Items are scanned and entered on arrival.</Step>
+  <Step>**Triage**: bulk materials (for example Gaylord containers) are processed and prepared for sorting.</Step>
+  <Step>**Sorting & Counting (S&C)**: materials are separated and categorized (for example batteries, electronics, metals).</Step>
+</Steps>
+
+How far an item travels depends on how its category is set up. See
+[Categories](/docs/catalog/categories).
+
+## Billing is based on subcategories
+
+**Billing always uses subcategories, never main categories.** Keep this in mind
+throughout Catalog and Pricing. See [Subcategories](/docs/catalog/subcategories).

@@ -1,0 +1,6 @@
+{
+  "title": "Operations",
+  "icon": "Truck",
+  "root": true,
+  "pages": ["index", "work-orders", "bols", "routes"]
+}

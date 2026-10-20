@@ -1,0 +1,62 @@
+---
+title: Packaging
+description: The containers used to store and measure materials. Rounded and rectangular packaging, capacity calculation, and thresholds.
+---
+
+Packaging defines how materials are stored and measured, for example Gaylords,
+pallets, bins, and drums. There are two shapes: **Rounded** and **Rectangular**.
+
+<UIPath items={["Catalog", "Packaging"]} />
+
+<Screenshot src="/images/catalog/packaging.jpg" alt="Packaging list" caption="① New packaging ② Rounded section (click to expand or collapse)" />
+
+| Section | Columns |
+| --- | --- |
+| **Rounded** | Name · Diameter (In) · Capacity Calculations · Threshold |
+| **Rectangular** | Name · Width (In) · Base (In) · Height (In) · Capacity Calculations · Threshold |
+
+## Add packaging
+
+<Steps>
+  <Step>
+    ### Click New packaging
+    The **New packaging item(s)** window opens.
+  </Step>
+  <Step>
+    ### Enter the name and shape
+    Enter the **Item name** (required) and choose the **Shape**: **Rectangular**
+    or **Rounded**. The size fields then appear: **Width**, **Length**, and
+    **Height (In)** for rectangular, or the diameter for rounded.
+
+    <Screenshot src="/images/catalog/packaging-new.jpg" alt="New packaging item" caption="① Item name ② Shape ③ Exclude from capacity calculation" />
+  </Step>
+  <Step>
+    ### Decide on capacity calculation
+    Tick **Exclude from capacity calculation (Stacked on top)** for packaging
+    that can be stacked on top of other items in the truck. A **Threshold**
+    field appears.
+
+    <Screenshot src="/images/catalog/packaging-threshold.jpg" alt="Threshold field" caption="① Shape and dimensions ② Exclude (Stacked on top) ③ Threshold ④ “Zero means always excluded from capacity calculation”" />
+  </Step>
+  <Step>
+    ### Set the threshold and save
+    Enter the **Threshold** and click **Save**.
+  </Step>
+</Steps>
+
+## Capacity calculation and thresholds
+
+<Callout type="info">
+  - Packaging that is **not** excluded counts toward the truck's capacity.
+  - For stacked (excluded) packaging, the **Threshold** is how many items can be
+    stacked. Example from the product team: with a threshold of **5**, once there
+    are more than 5 items they can no longer be excluded from the capacity
+    calculation.
+  - A threshold of **0** means the packaging is **always excluded** from the
+    capacity calculation (shown on screen).
+</Callout>
+
+The **Capacity Calculations** column shows **Yes** for packaging that counts
+toward capacity and **No** for packaging excluded from it.
+
+Use **⋮** on a row for its actions.
